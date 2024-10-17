@@ -1,0 +1,363 @@
+{
+  "selfSignedCertificateCreated": "Self-signed certificate created successfully",
+  "selfSignedCertificateCreatedAndCopied": "Self-signed certificate created successfully and copied to clipboard in PEM format",
+  "unknownErrorOccurred": "An unknown error occurred",
+  "certificateCreatedSuccessfully": "Certificate created successfully",
+  "certificate": "Certificate",
+  "certificates": "Certificates",
+  "certificatesOrgDescription": "Manage your certificates of the organization",
+  "certificatesKeyDescription": "Manage your certificates of the key",
+  "settings": "Settings",
+  "common": "Common",
+  "settingsDescription": "Set up your application here",
+  "profile": "Profile",
+  "profileDescription": "View and manage your profile",
+  "organization": {
+    "common": "Organization",
+    "description": "View and manage your organization",
+    "update": {
+      "common": "Edit organization",
+      "description": "Edit organization settings",
+      "success": "Organization updated successfully"
+    },
+    "delete": "Delete organization",
+    "deleteConfirmation": "Are you sure you want to delete the organization?",
+    "created": "Organization created successfully",
+    "deleted": "Organization deleted successfully",
+    "create": {
+      "common": "Create organization",
+      "description": "Create a new organization",
+      "success": "Organization created successfully"
+    },
+    "leave": {
+      "common": "Leave organization",
+      "confirmation": "Are you sure you want to leave the organization?",
+      "success": "You have successfully left the organization"
+    },
+    "members": {
+      "common": "Members",
+      "description": "Manage organization members"
+    },
+    "member": {
+      "invite": "Invite member",
+      "invited": "User successfully invited to the organization",
+      "delete": "Delete member",
+      "deleteConfirmation": "Are you sure you want to delete the organization member?",
+      "deleted": "Organization member successfully deleted",
+      "updated": "Organization member successfully updated",
+      "status": {
+        "active": "active",
+        "invited": "invited",
+        "rejected": "rejected"
+      }
+    }
+  },
+  "organizationRole": {
+    "owner": {
+      "name": "Owner",
+      "description": "Has full control over the organization, including managing members and settings. Can also delete the organization."
+    },
+    "admin": {
+      "name": "Admin",
+      "description": "Can manage most aspects of the organization, including members and settings."
+    },
+    "security": {
+      "name": "Security Officer",
+      "description": "Responsible for managing organization keys and key members. Cannot manage groups or the organization itself."
+    },
+    "member": {
+      "name": "Member",
+      "description": "Has limited access to the organization, typically for collaboration purposes."
+    },
+    "unknown": {
+      "name": "Unknown role",
+      "description": "Unknown role"
+    }
+  },
+  "invitations": {
+    "common": "Invitations",
+    "description": "Manage your invitations",
+    "acceptConfirmation": "Are you sure you want to accept the invitation?",
+    "declineConfirmation": "Are you sure you want to decline the invitation?"
+  },
+  "confirmation": "Confirmation",
+  "accept": "Accept",
+  "decline": "Decline",
+  "createOrganizationTooltip": "Create organization",
+  "organizations": "Organizations",
+  "organizationsDescription": "Manage your organizations",
+  "groups": {
+    "common": "Groups",
+    "description": "Manage your groups"
+  },
+  "group": {
+    "common": "Group",
+    "description": "View and manage your group",
+    "created": "Group created successfully",
+    "updated": "Group updated successfully",
+    "deleted": "Group deleted successfully",
+    "deleteConfirmation": "Are you sure you want to delete the group? This action cannot be undone.",
+    "notFound": "Group not found",
+    "backToList": "Back to groups",
+    "members": {
+      "common": "Members",
+      "description": "Manage group members"
+    },
+    "member": {
+      "common": "Member",
+      "description": "View and manage group member",
+      "create": "Add member",
+      "created": "Member added successfully",
+      "updated": "Member updated successfully",
+      "deleted": "Member deleted successfully",
+      "deleteConfirmation": "Are you sure you want to delete the member? This action cannot be undone."
+    }
+  },
+  "audit": {
+    "common": "Audit",
+    "description": "View and manage audit logs"
+  },
+  "id": "ID",
+  "members": "Members",
+  "tokens": {
+    "common": "Access tokens",
+    "description": "Manage your access tokens"
+  },
+  "token": {
+    "common": "Access token",
+    "description": "View and manage your access token",
+    "created": "Token created successfully",
+    "regenerate": "Token regenerated successfully",
+    "updated": "Token updated successfully",
+    "deleted": "Token deleted successfully",
+    "deleteConfirmation": "Are you sure you want to delete the token? This action cannot be undone."
+  },
+  "information": "Information",
+  "role": "Role",
+  "roles": "Roles",
+  "property": "Property",
+  "value": "Value",
+  "firstName": "First Name",
+  "lastName": "Last Name",
+  "email": "Email",
+  "language": "Language",
+  "auth": "Authentication",
+  "signIn": "Sign In",
+  "logout": "Logout",
+  "baseUrl": "Base URL",
+  "scopes": "Scopes",
+  "login": {
+    "auth_instructions": "For authentication, click the button below. It will open a new tab with the authorization link. You can either copy the <code>code</code> from the URL and paste it into the Code field below, or copy the <id_token>id_token</id_token> from the URL and paste it into the Token field below.",
+    "auth_token": "If you already have a token, you can paste it below."
+  },
+  "grantCode": "Grant code",
+  "openAuthLink": "Open authorization link",
+  "copy": "Copy",
+  "copiedToClipboard": "Value was copied to clipboard",
+  "name": "Name",
+  "createdAt": "Created at",
+  "updatedAt": "Updated at",
+  "provider": "Provider",
+  "personal": "Personal",
+  "slackWorkspaceId": "Slack Workspace ID",
+  "slack": "Slack",
+  "key": {
+    "common": "Key",
+    "description": "View and manage your key",
+    "import": {
+      "title": "Import key",
+      "step1": "Step 1: Select the key file",
+      "step2": "Step 2: Enter key details",
+      "step3": "Step 3: Review and confirm",
+      "drop": "Drag the file here or click to select",
+      "error": {
+        "invalidFile": "Invalid file format"
+      }
+    },
+    "created": "Key created successfully",
+    "updated": "Key updated successfully",
+    "imported": "Key imported successfully",
+    "preDeleted": "Deletion code requested successfully. Check your email for the code",
+    "deleted": "Key deleted successfully",
+    "preActivated": "Activation code requested successfully. Check your email for the code",
+    "activated": "Key activated successfully",
+    "deactivated": "Key deactivated successfully",
+    "deleteConfirmation": "Are you sure you want to delete the key? This action cannot be undone.",
+    "activeConfirmation": "Are you sure you want to activate the key?",
+    "deactivateConfirmation": "Are you sure you want to deactivate the key?",
+    "ownerChange": "Change owner",
+    "ownerChanged": "Key owner changed successfully",
+    "role": {
+      "operator": {
+        "name": "Operator",
+        "description": "Can perform cryptographic operations with the key"
+      },
+      "approver": {
+        "name": "Approver",
+        "description": "Can approve cryptographic operations with the key"
+      },
+      "auditor": {
+        "name": "Auditor",
+        "description": "Can view cryptographic operations with the key"
+      }
+    },
+    "members": {
+      "common": "Members",
+      "description": "Manage key members"
+    },
+    "member": {
+      "create": {
+        "common": "Add members",
+        "description": "Add members to the key",
+        "success": "Members added successfully"
+      },
+      "update": {
+        "common": "Edit member",
+        "description": "Edit member role",
+        "success": "Member role updated successfully"
+      },
+      "delete": {
+        "common": "Delete member",
+        "description": "Delete member from the key",
+        "success": "Member deleted successfully",
+        "confirm": "Are you sure you want to delete the member from the key?"
+      }
+    }
+  },
+  "operations": {
+    "common": "Operations",
+    "description": "View and manage operations"
+  },
+  "operation": {
+    "common": "Operation",
+    "description": "View and manage operation",
+    "type": {
+      "sign": "Sign",
+      "decrypt": "Decrypt",
+      "derive": "Derive"
+    },
+    "create": {
+      "common": "Create operation",
+      "description": "Create a new operation",
+      "success": "Operation created successfully"
+    },
+    "cancel": {
+      "common": "Cancel operation",
+      "description": "Cancel the operation",
+      "confirmation": "Are you sure you want to cancel the operation?",
+      "success": "Operation canceled successfully"
+    },
+    "approve": {
+      "common": "Approve operation",
+      "description": "Approve the operation",
+      "confirmation": "Are you sure you want to approve the operation?",
+      "success": "Operation approved successfully"
+    },
+    "reject": {
+      "common": "Reject operation",
+      "description": "Reject the operation",
+      "confirmation": "Are you sure you want to reject the operation?",
+      "success": "Operation rejected successfully"
+    },
+    "finalize": {
+      "common": "Finalize operation",
+      "description": "Finalize the operation",
+      "confirmation": "Are you sure you want to finalize the operation?",
+      "success": "Operation finalized successfully",
+      "file": "File",
+      "message": "Message",
+      "dropFile": "Specify the file by dragging it here or clicking the button",
+      "sign": {
+        "description": "Complete the signing operation"
+      },
+      "decrypt": {
+        "description": "Complete the decryption operation"
+      },
+      "derive": {
+        "description": "Complete the key derivation operation"
+      },
+      "error": {
+        "unknownType": "Unknown operation type"
+      }
+    }
+  },
+  "user": "User",
+  "events": "Events",
+  "spki": "Key fingerprint",
+  "ip": "IP address",
+  "device": "Device",
+  "action": "Action",
+  "createKey": "Create key",
+  "keyName": "Key name",
+  "keyType": "Key type",
+  "expiresAt": "Expires at",
+  "params": "Parameters",
+  "password": "Password",
+  "algorithm": "Algorithm",
+  "personalKey": "Personal key",
+  "keys": "Keys",
+  "keysDescription": "Manage your keys",
+  "resetFilters": "Reset filters",
+  "showFilters": "Show filters",
+  "hideFilters": "Hide filters",
+  "emptyList": "List is empty",
+  "loadMore": "Load More",
+  "type": "Type",
+  "quorum": "Quorum",
+  "yes": "Yes",
+  "no": "No",
+  "description": "Description",
+  "refresh": "Refresh",
+  "status": "Status",
+  "active": "Active",
+  "inactive": "Inactive",
+  "pending": "Pending",
+  "all": "All",
+  "member": "Member",
+  "operator": "Operator",
+  "approver": "Approver",
+  "auditor": "Auditor",
+  "admin": "Admin",
+  "owner": "Owner",
+  "create": "Create",
+  "edit": "Edit",
+  "delete": "Delete",
+  "import": "Import",
+  "finalize": "Finalize",
+  "activate": "Activate",
+  "deactivate": "Deactivate",
+  "approve": "Approve",
+  "reject": "Reject",
+  "save": "Save",
+  "cancel": "Cancel",
+  "complete": "Complete",
+  "back": "Back",
+  "next": "Next",
+  "confirm": "Confirm",
+  "creating": "Creating",
+  "editing": "Editing",
+  "deleting": "Deleting",
+  "activating": "Activating",
+  "deactivating": "Deactivating",
+  "orderBy": "Order by",
+  "lastUsed": "Last used",
+  "approvals": "Approvals",
+  "preview": "Preview",
+  "sign": "Sign",
+  "decrypt": "Decrypt",
+  "derive": "Derive",
+  "canceled": "Canceled",
+  "completed": "Completed",
+  "error": "Error",
+  "expired": "Expired",
+  "ready": "Ready",
+  "rejected": "Rejected",
+  "never": "Never",
+  "asc": "Ascending",
+  "desc": "Descending",
+  "reason": "Reason",
+  "theme": "Theme",
+  "darkMode": "Dark mode",
+  "details": "Details",
+  "search": "Search"
+}
