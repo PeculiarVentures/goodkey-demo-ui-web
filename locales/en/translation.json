@@ -10,8 +10,14 @@
   "settings": "Settings",
   "common": "Common",
   "settingsDescription": "Set up your application here",
-  "profile": "Profile",
-  "profileDescription": "View and manage your profile",
+  "profile": {
+    "common": "Profile",
+    "description": "View and manage your profile",
+    "logout": {
+      "common": "Logout",
+      "confirmation": "Are you sure you want to logout?"
+    }
+  },
   "organization": {
     "common": "Organization",
     "description": "View and manage your organization",
@@ -199,6 +205,10 @@
       "auditor": {
         "name": "Auditor",
         "description": "Can view cryptographic operations with the key"
+      },
+      "owner": {
+        "name": "Owner",
+        "description": "Has full control over the key, including managing members and settings. Can also delete the key."
       }
     },
     "members": {
