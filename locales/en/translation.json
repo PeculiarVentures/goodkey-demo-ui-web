@@ -3,7 +3,37 @@
   "selfSignedCertificateCreatedAndCopied": "Self-signed certificate created successfully and copied to clipboard in PEM format",
   "unknownErrorOccurred": "An unknown error occurred",
   "certificateCreatedSuccessfully": "Certificate created successfully",
-  "certificate": "Certificate",
+  "certificate": {
+    "common": "Certificate",
+    "description": "View and manage your certificate",
+    "import": {
+      "title": "Import certificate",
+      "step1": "Step 1: Select the certificate file",
+      "step2": "Step 2: Enter certificate details",
+      "step3": "Step 3: Review and confirm",
+      "drop": "Drag the file here or click to select",
+      "error": {
+        "invalidFile": "Invalid file format"
+      },
+      "success": "Certificate imported successfully"
+    },
+    "update": {
+      "common": "Edit certificate",
+      "description": "Edit certificate settings",
+      "success": "Certificate updated successfully"
+    },
+    "delete": {
+      "common": "Delete certificate",
+      "description": "Delete the certificate",
+      "code": "Enter the activation code to delete the certificate",
+      "confirmation": "Are you sure you want to delete the certificate?",
+      "success": "Certificate deleted successfully"
+    },
+    "download": {
+      "common": "Download certificate",
+      "description": "Download the certificate"
+    }
+  },
   "certificates": "Certificates",
   "certificatesOrgDescription": "Manage your certificates of the organization",
   "certificatesKeyDescription": "Manage your certificates of the key",
@@ -341,9 +371,12 @@
   "save": "Save",
   "cancel": "Cancel",
   "complete": "Complete",
+  "update": "Update",
+  "requestCode": "Request code",
   "back": "Back",
   "next": "Next",
   "confirm": "Confirm",
+  "code": "Code",
   "creating": "Creating",
   "editing": "Editing",
   "deleting": "Deleting",
@@ -369,5 +402,9 @@
   "theme": "Theme",
   "darkMode": "Dark mode",
   "details": "Details",
+  "subject": "Subject",
+  "issuer": "Issuer",
+  "validFrom": "Valid from",
+  "validTo": "Valid to",
   "search": "Search"
 }
