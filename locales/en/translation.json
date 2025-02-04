@@ -193,13 +193,40 @@
   "name": "Name",
   "createdAt": "Created at",
   "updatedAt": "Updated at",
-  "provider": "Provider",
   "personal": "Personal",
   "slackWorkspaceId": "Slack Workspace ID",
   "slack": "Slack",
+  "providers": {
+    "common": "Providers",
+    "description": "Manage your providers"
+  },
+  "provider": {
+    "common": "Provider",
+    "description": "View and manage your provider"
+  },
   "key": {
     "common": "Key",
     "description": "View and manage your key",
+    "create": {
+      "title": "Create key",
+      "description": "Create a new key",
+      "step1": {
+        "title": "Basic information",
+        "description": "Enter basic key information"
+      },
+      "step2": {
+        "title": "Key parameters",
+        "description": "Select key parameters"
+      },
+      "step3": {
+        "title": "Algorithms",
+        "description": "Select algorithms for the key"
+      },
+      "step4": {
+        "title": "Summary",
+        "description": "Review key settings"
+      }
+    },
     "import": {
       "title": "Import key",
       "step1": "Step 1: Select the key file",
@@ -318,9 +345,16 @@
       },
       "error": {
         "unknownType": "Unknown operation type"
+      },
+      "snackbar": {
+        "message": "Operation completed successfully. Here is the result:",
+        "copySuccess": "Result copied to clipboard"
       }
     }
   },
+  "keySize": "Key size",
+  "namedCurve": "Named curve",
+  "hashAlgorithm": "Hash algorithm",
   "user": "User",
   "events": "Events",
   "spki": "Key fingerprint",
@@ -334,6 +368,9 @@
   "params": "Parameters",
   "password": "Password",
   "algorithm": "Algorithm",
+  "algorithms": {
+    "common": "Algorithms"
+  },
   "personalKey": "Personal key",
   "keys": "Keys",
   "keysDescription": "Manage your keys",
@@ -376,6 +413,7 @@
   "back": "Back",
   "next": "Next",
   "confirm": "Confirm",
+  "finish": "Finish",
   "code": "Code",
   "creating": "Creating",
   "editing": "Editing",
@@ -406,5 +444,8 @@
   "issuer": "Issuer",
   "validFrom": "Valid from",
   "validTo": "Valid to",
+  "size": "Size",
+  "usage": "Usage",
+  "mode": "Mode",
   "search": "Search"
 }
