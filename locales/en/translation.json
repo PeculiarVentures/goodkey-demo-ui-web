@@ -247,6 +247,7 @@
       "download": "Download public key",
       "copy": "Copy public key"
     },
+    "usages": "Usages",
     "preActivated": "Activation code requested successfully. Check your email for the code",
     "activated": "Key activated successfully",
     "deactivated": "Key deactivated successfully",
