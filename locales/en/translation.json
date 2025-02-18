@@ -242,7 +242,11 @@
     "imported": "Key imported successfully",
     "preDeleted": "Deletion code requested successfully. Check your email for the code",
     "deleted": "Key deleted successfully",
-    "downloadPublicKey": "Download public key",
+    "publicKey": {
+      "common": "Public key",
+      "download": "Download public key",
+      "copy": "Copy public key"
+    },
     "preActivated": "Activation code requested successfully. Check your email for the code",
     "activated": "Key activated successfully",
     "deactivated": "Key deactivated successfully",
