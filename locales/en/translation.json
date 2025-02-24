@@ -183,7 +183,7 @@
   "baseUrl": "Base URL",
   "scopes": "Scopes",
   "login": {
-    "auth_instructions": "For authentication, click the button below. It will open a new tab with the authorization link. You can either copy the <code>code</code> from the URL and paste it into the Code field below, or copy the <id_token>id_token</id_token> from the URL and paste it into the Token field below.",
+    "auth_instructions": "The application will navigate to the authorization page. After authentication, it will return with a code that will be automatically filled in the <code>Grant Code</code> field.",
     "auth_token": "If you already have a token, you can paste it below."
   },
   "grantCode": "Grant code",
