@@ -112,6 +112,10 @@ OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
 PERFORMANCE OF THIS SOFTWARE.
 ***************************************************************************** */
 
+/*! noble-hashes - MIT License (c) 2022 Paul Miller (paulmillr.com) */
+
+/*! noble-post-quantum - MIT License (c) 2024 Paul Miller (paulmillr.com) */
+
 /**
  * @license React
  * react-dom.production.min.js
