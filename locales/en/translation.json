@@ -8,12 +8,16 @@
     "description": "View and manage your certificate",
     "import": {
       "title": "Import certificate",
-      "step1": "Step 1: Select the certificate file",
+      "step1": "Step 1: Select or paste the certificate",
       "step2": "Step 2: Enter certificate details",
       "step3": "Step 3: Review and confirm",
+      "file": "File",
+      "text": "Text",
+      "pasteText": "Certificate Text",
+      "textPlaceholder": "Paste X.509 (PEM/DER/Base64/Hex) or SSH certificate here...",
       "drop": "Drag the file here or click to select",
       "error": {
-        "invalidFile": "Invalid file format"
+        "invalidFile": "Invalid certificate format or unable to parse"
       },
       "success": "Certificate imported successfully"
     },
@@ -450,6 +454,15 @@
   "issuer": "Issuer",
   "validFrom": "Valid from",
   "validTo": "Valid to",
+  "keyId": "Key ID",
+  "certType": "Certificate Type",
+  "serial": "Serial Number",
+  "serialNumber": "Serial Number",
+  "principals": "Principals",
+  "publicKey": "Public Key",
+  "extensions": "Extensions",
+  "criticalOptions": "Critical Options",
+  "none": "None",
   "size": "Size",
   "usage": "Usage",
   "mode": "Mode",
