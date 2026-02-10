@@ -118,19 +118,9 @@ PERFORMANCE OF THIS SOFTWARE.
 
 /**
  * @license React
- * react-dom.production.min.js
+ * react-dom-client.production.js
  *
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-/**
- * @license React
- * react-jsx-runtime.production.min.js
- *
- * Copyright (c) Facebook, Inc. and its affiliates.
+ * Copyright (c) Meta Platforms, Inc. and affiliates.
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
@@ -138,9 +128,9 @@ PERFORMANCE OF THIS SOFTWARE.
 
 /**
  * @license React
- * react.production.min.js
+ * react-dom.production.js
  *
- * Copyright (c) Facebook, Inc. and its affiliates.
+ * Copyright (c) Meta Platforms, Inc. and affiliates.
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
@@ -148,9 +138,49 @@ PERFORMANCE OF THIS SOFTWARE.
 
 /**
  * @license React
- * scheduler.production.min.js
+ * react-is.production.js
  *
- * Copyright (c) Facebook, Inc. and its affiliates.
+ * Copyright (c) Meta Platforms, Inc. and affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/**
+ * @license React
+ * react-jsx-runtime.production.js
+ *
+ * Copyright (c) Meta Platforms, Inc. and affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/**
+ * @license React
+ * react.production.js
+ *
+ * Copyright (c) Meta Platforms, Inc. and affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/**
+ * @license React
+ * scheduler.production.js
+ *
+ * Copyright (c) Meta Platforms, Inc. and affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/**
+ * @license React
+ * use-sync-external-store-shim.production.js
+ *
+ * Copyright (c) Meta Platforms, Inc. and affiliates.
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
@@ -167,7 +197,7 @@ PERFORMANCE OF THIS SOFTWARE.
  */
 
 /**
- * @mui/icons-material v6.3.1
+ * @mui/material v7.3.7
  *
  * @license MIT
  * This source code is licensed under the MIT license found in the
@@ -175,7 +205,7 @@ PERFORMANCE OF THIS SOFTWARE.
  */
 
 /**
- * @mui/material v6.3.1
+ * @mui/private-theming v7.3.7
  *
  * @license MIT
  * This source code is licensed under the MIT license found in the
@@ -183,7 +213,7 @@ PERFORMANCE OF THIS SOFTWARE.
  */
 
 /**
- * @mui/styled-engine v6.3.1
+ * @mui/styled-engine v7.3.7
  *
  * @license MIT
  * This source code is licensed under the MIT license found in the
@@ -191,7 +221,7 @@ PERFORMANCE OF THIS SOFTWARE.
  */
 
 /**
- * @mui/x-date-pickers v7.23.6
+ * @mui/system v7.3.7
  *
  * @license MIT
  * This source code is licensed under the MIT license found in the
@@ -199,7 +229,15 @@ PERFORMANCE OF THIS SOFTWARE.
  */
 
 /**
- * @remix-run/router v1.21.0
+ * @mui/x-date-pickers v8.27.0
+ *
+ * @license MIT
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/**
+ * react-router v7.13.0
  *
  * Copyright (c) Remix Software Inc.
  *
@@ -210,18 +248,7 @@ PERFORMANCE OF THIS SOFTWARE.
  */
 
 /**
- * React Router DOM v6.28.1
- *
- * Copyright (c) Remix Software Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE.md file in the root directory of this source tree.
- *
- * @license MIT
- */
-
-/**
- * React Router v6.28.1
+ * react-router-dom v7.13.0
  *
  * Copyright (c) Remix Software Inc.
  *
