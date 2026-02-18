@@ -188,6 +188,7 @@
   "scopes": "Scopes",
   "login": {
     "auth_instructions": "The application will navigate to the authorization page. After authentication, it will return with a code that will be automatically filled in the <code>Grant Code</code> field.",
+    "auth_instructions_prod": "Paste your access token below. Authorization via the link is not available on the production server.",
     "auth_token": "If you already have a token, you can paste it below."
   },
   "grantCode": "Grant code",
