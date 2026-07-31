@@ -185,7 +185,82 @@
   "signIn": "Sign In",
   "logout": "Logout",
   "baseUrl": "Base URL",
+  "serverNames": {
+    "production": "Production",
+    "canary": "Canary",
+    "sandbox": "Sandbox",
+    "local": "Localhost"
+  },
   "scopes": "Scopes",
+  "scopePicker": {
+    "selectAll": "Select all",
+    "clear": "Clear"
+  },
+  "scopeGroups": {
+    "organization": "Organization",
+    "member": "Members",
+    "group": "Groups",
+    "invite": "Invitations",
+    "key": "Keys",
+    "operation": "Key operations",
+    "certificate": "Certificates",
+    "slack": "Slack",
+    "audit": "Audit logs",
+    "token": "Access tokens"
+  },
+  "scopeDescriptions": {
+    "category": {
+      "organization": "Organization"
+    },
+    "unknown": "Unknown scope",
+    "org": {
+      "read": "Read organization",
+      "write": "Write organization",
+      "delete": "Delete organization",
+      "member": {
+        "read": "Read organization members",
+        "write": "Change another member's role",
+        "delete": "Remove another member from the organization"
+      },
+      "group": {
+        "read": "Read organization groups",
+        "write": "Create or update a group, or add/remove its members",
+        "delete": "Delete a group"
+      },
+      "invite": {
+        "read": "Read organization invitations",
+        "write": "Create or update an invitation",
+        "delete": "Delete an invitation"
+      },
+      "key": {
+        "read": "Read organization keys",
+        "write": "Create or update a key",
+        "delete": "Delete a key"
+      },
+      "operation": {
+        "read": "Get a key operation",
+        "write": "Create, finalize, or cancel a key operation",
+        "review": "Approve or reject a pending key operation"
+      },
+      "certificate": {
+        "read": "Read organization certificates",
+        "write": "Create or update a certificate",
+        "delete": "Request a deletion code for, or delete, a certificate"
+      },
+      "slack": {
+        "write": "Connect or configure the Slack integration",
+        "delete": "Disconnect the Slack integration"
+      },
+      "audit": {
+        "read": "Read audit logs"
+      },
+      "token": {
+        "read": "Read another member's access token",
+        "write": "Create, update, or regenerate an access token",
+        "delete": "Delete or deactivate another member's access token"
+      }
+    }
+  },
   "login": {
     "auth_instructions": "The application will navigate to the authorization page. After authentication, it will return with a code that will be automatically filled in the <code>Grant Code</code> field.",
     "auth_instructions_prod": "Paste your access token below. Authorization via the link is not available on the production server.",
