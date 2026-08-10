@@ -17,9 +17,38 @@
       "textPlaceholder": "Paste X.509 (PEM/DER/Base64/Hex) or SSH certificate here...",
       "drop": "Drag the file here or click to select",
       "error": {
-        "invalidFile": "Invalid certificate format or unable to parse"
+        "invalidFile": "Invalid certificate format or unable to parse",
+        "typeNotDetermined": "Certificate type could not be determined",
+        "notSet": "Certificate is not set"
       },
+      "inputMethod": "input method",
       "success": "Certificate imported successfully"
+    },
+    "create": {
+      "title": "Create Certificate",
+      "steps": {
+        "type": "Select Certificate Type",
+        "create": "Create Certificate"
+      },
+      "selectType": "Select Certificate Type",
+      "typeAriaLabel": "certificate type",
+      "selfSigned": "Self-Signed Certificate (X509)",
+      "csr": "Certificate Request (PKCS10/CSR)",
+      "apiNote": "NOTE: This type of API doesn't require quorum approvals.",
+      "nameHeading": "Name:",
+      "signatureAlgorithm": "Signature Algorithm",
+      "saveOnServer": "Save certificate on the server",
+      "serialHex": "Serial Number (hexadecimal):",
+      "validity": "Validity:",
+      "notBefore": "Not Before",
+      "notAfter": "Not After",
+      "completed": "All steps completed - you're finished",
+      "reset": "Reset",
+      "error": {
+        "algorithmNotSelected": "Algorithm is not selected",
+        "invalidType": "Invalid certificate type",
+        "organizationIdRequired": "Organization ID is required"
+      }
     },
     "update": {
       "common": "Edit certificate",
@@ -89,6 +118,32 @@
         "active": "active",
         "invited": "invited",
         "rejected": "rejected"
+      },
+      "inviteDialog": {
+        "title": "Invite New Member",
+        "invite": "Invite"
+      }
+    },
+    "token": {
+      "create": {
+        "title": "Create Organization Token"
+      },
+      "update": {
+        "title": "Update Organization Token"
+      },
+      "refresh": {
+        "title": "Refresh Access Token",
+        "description": "Refreshing the access token will generate a new token value."
+      },
+      "fields": {
+        "ips": "IPs",
+        "enterIps": "Enter IPs",
+        "selectKeys": "Select keys",
+        "selectCertificates": "Select certificates"
+      },
+      "error": {
+        "organizationIdRequired": "Organization ID is required",
+        "idsRequired": "Organization ID and Token ID are required"
       }
     }
   },
@@ -275,6 +330,9 @@
   "copyBearerToken": "Copy as Bearer",
   "bearerTokenCopied": "Bearer token copied",
   "name": "Name",
+  "label": "Label",
+  "saltLength": "Salt length",
+  "empty": "Empty",
   "createdAt": "Created at",
   "updatedAt": "Updated at",
   "personal": "Personal",
@@ -309,6 +367,9 @@
       "step4": {
         "title": "Summary",
         "description": "Review key settings"
+      },
+      "error": {
+        "organizationIdRequired": "Organization ID is required"
       }
     },
     "import": {
@@ -318,7 +379,8 @@
       "step3": "Step 3: Review and confirm",
       "drop": "Drag the file here or click to select",
       "error": {
-        "invalidFile": "Invalid file format"
+        "invalidFile": "Invalid file format",
+        "missingData": "Data and organization ID are required"
       }
     },
     "created": "Key created successfully",
@@ -366,7 +428,17 @@
       "create": {
         "common": "Add members",
         "description": "Add members to the key",
-        "success": "Members added successfully"
+        "success": "Members added successfully",
+        "error": {
+          "load": "Failed to load users and groups",
+          "organizationIdRequired": "Organization ID is required"
+        }
+      },
+      "createDialog": {
+        "title": "Add Member or Group to Key",
+        "add": "Add",
+        "membersLabel": "Members or Groups",
+        "membersPlaceholder": "Select members or groups"
       },
       "update": {
         "common": "Edit member",
@@ -396,7 +468,11 @@
     "create": {
       "common": "Create operation",
       "description": "Create a new operation",
-      "success": "Operation created successfully"
+      "success": "Operation created successfully",
+      "error": {
+        "organizationIdRequired": "Organization ID is required",
+        "keyNotFound": "Key not found"
+      }
     },
     "cancel": {
       "common": "Cancel operation",
@@ -434,8 +510,12 @@
         "description": "Complete the key derivation operation"
       },
       "error": {
-        "unknownType": "Unknown operation type"
+        "unknownType": "Unknown operation type",
+        "organizationIdRequired": "Organization ID is required",
+        "dataNotFound": "Data not found"
       },
+      "signType": "sign type",
+      "decryptType": "decrypt type",
       "snackbar": {
         "message": "Operation completed successfully. Here is the result:",
         "copySuccess": "Result copied to clipboard"
