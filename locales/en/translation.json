@@ -559,6 +559,8 @@
   "description": "Description",
   "refresh": "Refresh",
   "status": "Status",
+  "state": "State",
+  "source": "Source",
   "active": "Active",
   "inactive": "Inactive",
   "pending": "Pending",
@@ -652,9 +654,9 @@
       "modeLabel": "Selected mode",
       "modeForce": "Force deletion",
       "modeManaged": "Managed deletion",
-      "forceConsequences": "No deletion job or physical operation will run. The authenticator record is removed immediately and permanently.",
-      "managedConsequences": "A deletion job will be created and may perform a physical operation. The authenticator will be marked as deleted.",
-      "managedUnavailable": "Managed deletion is unavailable because this authenticator is already deleted.",
+      "forceConsequences": "No deletion job or physical operation will run. Unfinished jobs are closed and the authenticator record is removed immediately and permanently.",
+      "managedConsequences": "A deletion job will be created and may perform a physical operation. The authenticator will transition to deleting and be marked as deleted when the job completes.",
+      "managedUnavailable": "Managed deletion is unavailable for this authenticator in its current state.",
       "submit": "Delete authenticator"
     },
     "product": "Product",
@@ -662,6 +664,63 @@
     "firmware": "Firmware",
     "profilesData": "Profiles data",
     "jobs": "Jobs",
+    "jobsPage": {
+      "title": "Jobs",
+      "description": "View and manage the jobs of this authenticator."
+    },
+    "job": {
+      "status": {
+        "draft": "Draft",
+        "active": "Active",
+        "processing": "Processing",
+        "failed": "Failed",
+        "completed": "Completed",
+        "canceled": "Canceled"
+      },
+      "type": {
+        "registration": "Registration",
+        "deletion": "Deletion",
+        "update": "Update"
+      },
+      "source": {
+        "system": "System",
+        "user": "User"
+      },
+      "common": "Job",
+      "edit": {
+        "common": "Edit job",
+        "title": "Edit job",
+        "submit": "Save"
+      },
+      "create": {
+        "common": "Create job",
+        "title": "Create job",
+        "statusDraft": "Draft",
+        "statusActive": "Active",
+        "submit": "Create job"
+      },
+      "deleteTitle": "Delete job",
+      "deleteConfirmation": "Delete job \"{{name}}\"?"
+    },
+    "jobCreated": "Job created successfully",
+    "jobDeleted": "Job deleted successfully",
+    "jobPage": {
+      "description": "View and manage this job.",
+      "openSimulator": "Open in simulator",
+      "tasks": "Tasks",
+      "dependsOn": "Depends on",
+      "error": "Error",
+      "resultInfo": "Result info"
+    },
+    "task": {
+      "state": {
+        "active": "Active",
+        "processing": "Processing",
+        "completed": "Completed",
+        "failed": "Failed",
+        "canceled": "Canceled"
+      }
+    },
     "simulator": "Simulator",
     "productPage": {
       "common": "Authenticator product",
@@ -693,8 +752,6 @@
         "manual": "Manual/raw"
       },
       "failTask": "Task to fail",
-      "activate": "Activate draft job",
-      "activateHint": "Activate the draft job before sending task transitions.",
       "runAll": "Run all",
       "step": "Step",
       "startProcessing": "Start processing",
@@ -707,7 +764,7 @@
       "state": "State",
       "available": "Available",
       "dependsOn": "Depends on",
-      "secretRefs": "Secret references",
+      "secretRef": "Secret reference",
       "error": "Error",
       "errorRequired": "An error is required when failing a task.",
       "resultInfo": "Result info",
@@ -735,16 +792,51 @@
     "managedDeleteTooltip": "Start a managed deletion job for this authenticator",
     "managedDeleteConfirmation": "Managed deletion marks this authenticator as deleted and creates a deletion job that may remove its physical data. This action cannot be undone.",
     "managedDeleteStarted": "Authenticator managed deletion started successfully",
+    "restore": "Restore authenticator",
+    "restoreTooltip": "Restore authenticator to active",
+    "restored": "Authenticator restored successfully",
     "jobUpdated": "Job updated successfully",
     "taskCreated": "Task created successfully",
     "taskUpdated": "Task updated successfully",
+    "secrets": {
+      "title": "Secrets",
+      "description": "View and manage the server-owned secrets of this authenticator.",
+      "profileType": "Profile",
+      "type": "Secret type",
+      "currentVersion": "Current version",
+      "recoveryVersion": "Recovery version",
+      "versionsTitle": "Secret versions",
+      "versionsDescription": "View the version history of this secret.",
+      "versions": "Versions",
+      "version": "Version",
+      "local": "Local",
+      "task": "Task",
+      "revealCurrent": "Reveal current version",
+      "revealVersion": "Reveal version"
+    },
+    "secret": {
+      "status": {
+        "provisioning": "Provisioning",
+        "active": "Active",
+        "failed": "Failed"
+      }
+    },
+    "secretVersion": {
+      "status": {
+        "pending": "Pending",
+        "active": "Active",
+        "superseded": "Superseded",
+        "failed": "Failed"
+      }
+    },
     "secretReveal": {
       "title": "Reveal secret",
       "currentTitle": "Reveal current admin secret",
       "currentButton": "Reveal current admin secret",
       "currentDescription": "Choose the profile and secret type to reveal the active version.",
       "reveal": "Reveal",
-      "status": "Status",
+      "secretId": "Secret ID",
+      "versionId": "Version ID",
       "secretType": "Profile and secret type",
       "selectType": "Select a profile and secret type",
       "noOptions": "No admin secret types are available for this authenticator.",
@@ -755,6 +847,7 @@
     "status": {
       "draft": "Draft",
       "active": "Active",
+      "deleting": "Deleting",
       "deleted": "Deleted",
       "failed": "Failed"
     }
