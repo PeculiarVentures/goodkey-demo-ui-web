@@ -753,6 +753,7 @@
       },
       "failTask": "Task to fail",
       "runAll": "Run all",
+      "cancelJob": "Cancel job",
       "step": "Step",
       "startProcessing": "Start processing",
       "completed": "Complete task",
