@@ -773,7 +773,14 @@
       "emptyJournal": "No transitions have been sent yet.",
       "noJobs": "This authenticator has no jobs.",
       "failDialogTitle": "Fail task",
-      "rawDialogTitle": "Raw task transition"
+      "rawDialogTitle": "Raw task transition",
+      "executionContract": "Execution contract",
+      "protocolVersion": "executor protocol",
+      "workflowRevision": "workflow revision",
+      "taskContracts": "task contracts",
+      "checkCompatibility": "Check compatibility",
+      "compatibilityOk": "Job is compatible and can be executed.",
+      "compatibilityFailed": "Job is not executable"
     },
     "register": {
       "common": "Register authenticator",

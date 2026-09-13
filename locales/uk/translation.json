@@ -773,7 +773,14 @@
       "emptyJournal": "Переходи ще не надсилалися.",
       "noJobs": "У цього автентифікатора немає завдань.",
       "failDialogTitle": "Помилка задачі",
-      "rawDialogTitle": "Raw-перехід задачі"
+      "rawDialogTitle": "Raw-перехід задачі",
+      "executionContract": "Контракт виконання",
+      "protocolVersion": "протокол виконавця",
+      "workflowRevision": "ревізія workflow",
+      "taskContracts": "контрактів задач",
+      "checkCompatibility": "Перевірити сумісність",
+      "compatibilityOk": "Завдання сумісне та може бути виконане.",
+      "compatibilityFailed": "Завдання невиконуване"
     },
     "register": {
       "common": "Зареєструвати автентифікатор",

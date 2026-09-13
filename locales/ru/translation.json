@@ -773,7 +773,14 @@
       "emptyJournal": "Переходы ещё не отправлялись.",
       "noJobs": "У этого аутентификатора нет заданий.",
       "failDialogTitle": "Ошибка задачи",
-      "rawDialogTitle": "Raw-переход задачи"
+      "rawDialogTitle": "Raw-переход задачи",
+      "executionContract": "Контракт выполнения",
+      "protocolVersion": "протокол исполнителя",
+      "workflowRevision": "ревизия workflow",
+      "taskContracts": "контрактов задач",
+      "checkCompatibility": "Проверить совместимость",
+      "compatibilityOk": "Задание совместимо и может быть выполнено.",
+      "compatibilityFailed": "Задание невыполнимо"
     },
     "register": {
       "common": "Зарегистрировать аутентификатор",
