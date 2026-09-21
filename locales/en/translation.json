@@ -262,7 +262,10 @@
     "certificate": "Certificates",
     "slack": "Slack",
     "audit": "Audit logs",
-    "token": "Access tokens"
+    "token": "Access tokens",
+    "authenticator": "Authenticators",
+    "task": "Authenticator tasks",
+    "secret": "Authenticator secrets"
   },
   "scopeDescriptions": {
     "category": {
@@ -314,6 +317,17 @@
         "read": "Read another member's access token",
         "write": "Create, update, or regenerate an access token",
         "delete": "Delete or deactivate another member's access token"
+      },
+      "authenticator": {
+        "read": "Read organization authenticators",
+        "write": "Register, update, or restore an authenticator, or manage its jobs and tasks",
+        "delete": "Force-delete or managed-delete an authenticator",
+        "task": {
+          "update": "Update an authenticator job task"
+        },
+        "secret": {
+          "reveal": "Reveal an authenticator secret or get its credential"
+        }
       }
     }
   },
