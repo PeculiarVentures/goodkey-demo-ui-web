@@ -673,6 +673,11 @@
       "managedUnavailable": "Managed deletion is unavailable for this authenticator in its current state.",
       "submit": "Delete authenticator"
     },
+    "executor": {
+      "upgradeRequired": "Executor upgrade required. Refresh the product catalog and try again.",
+      "protocolUnsupported": "Executor protocol version is not supported by the server.",
+      "contractUnsupported": "Executor does not support the required task contract."
+    },
     "product": "Product",
     "syncedAt": "Last synchronized",
     "firmware": "Firmware",
