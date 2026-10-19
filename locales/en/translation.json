@@ -1005,6 +1005,7 @@
     "faultName": {
       "none": "Normal execution",
       "wrong_pin": "Wrong PIN",
+      "wrong_admin_credential": "Wrong administrative credential",
       "removed": "Remove card during operation",
       "timeout": "Touch timeout",
       "lost_ack": "Lose server acknowledgement"
@@ -1012,6 +1013,7 @@
     "faultHelp": {
       "none": "Run with the supplied credentials and current card state.",
       "wrong_pin": "Inject one wrong PIN attempt. The card retry counter changes.",
+      "wrong_admin_credential": "Use a deliberately wrong current GoodKey administrative credential (MGM or PUK). A wrong PUK consumes a retry.",
       "removed": "Disconnect the card before mutation. Reconnect it to continue.",
       "timeout": "Simulate a missing touch confirmation without changing key material.",
       "lost_ack": "Apply the operation to the card but hold its completion report. Retry the report without repeating the operation."
@@ -1064,7 +1066,8 @@
       "unsupported_algorithm": "Choose a supported algorithm: P-256, P-384 or RSA 2048.",
       "invalid_parameters": "Check the operation parameters.",
       "crypto_failed": "Cryptographic operation failed.",
-      "secret_required": "Administrative credential unavailable; refresh card state."
+      "secret_required": "Administrative credential unavailable; refresh card state.",
+      "management_key_incorrect": "The current PIV management key from GoodKey was rejected by the card. No protected operation was performed."
     },
     "configuredCredentials": "Configured demo card: PIN 654321; PUK 87654321. Enter credentials only when needed.",
     "configuredPinHelp": "Enter the current PIN. This configured card initially used 654321. A wrong PIN consumes a retry.",
@@ -1108,6 +1111,10 @@
       "execution_in_progress": "This virtual card is executing in another tab. Wait for it to finish.",
       "unknown_mutation": "A task is processing without a saved local result. Check its card and server state before continuing; repeating the operation could apply it twice.",
       "secret_unavailable": "The exact administrative secret required by this task could not be obtained. Check access to the GoodKey secret version.",
+      "secret_target_invalid": "This task refers to an administrative secret target that GoodKey could not accept. Check the stored secret metadata and the job configuration.",
+      "secret_malformed": "GoodKey returned a malformed administrative secret for this task. Check the stored secret and create a new version if needed.",
+      "secret_not_found": "The administrative secret required by this task is not available for this virtual card.",
+      "secret_ambiguous": "Multiple administrative secrets match this task. Remove the duplicate in GoodKey and retry.",
       "invalid_response": "GoodKey did not confirm the expected task state. Refresh jobs and review the saved card result before retrying.",
       "invalid_result": "The software operation returned an invalid result. Review the saved card state before starting a new workflow.",
       "credential_required": "Enter the credentials required by the next task: current PIN, PUK for recovery, and/or a new PIN matching the task policy. For PIV use 6–8 digits; for FIDO2 use 4–63 characters.",
@@ -1117,6 +1124,8 @@
       "automatic": "Use current virtual card credentials",
       "automaticHint": "Required credentials are read from this local card when each operation starts.",
       "manualHint": "Enter your own values to test failures. A wrong PIN or PUK consumes a retry.",
+      "automaticHintServer": "The current PIN is read from this local card. The PIV management key and PUK are resolved from GoodKey for server jobs.",
+      "manualHintServer": "Enter a PIN or PUK only to test failures. A manually entered PUK replaces the GoodKey-resolved PUK for this job; a wrong PUK consumes a retry. The management key always comes from GoodKey.",
       "pin": "Current PIV PIN",
       "fidoPin": "Current FIDO2 PIN",
       "puk": "PUK",
