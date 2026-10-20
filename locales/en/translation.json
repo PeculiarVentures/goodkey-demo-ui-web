@@ -899,9 +899,13 @@
       "configured": "Configured",
       "blocked": "PIN blocked"
     },
-    "productSupport": "The demo supports the PIV profile of YubiKey 5 and YubiKey 6 Dev products from your server catalog.",
-    "noProducts": "No supported YubiKey 5 or YubiKey 6 Dev PIV product is available in this environment.",
+    "productSupport": "The demo supports the PIV profile of YubiKey 5, YubiKey 6 Dev, and SafeNet Fusion PIV products from your server catalog.",
+    "noProducts": "No supported YubiKey 5, YubiKey 6 Dev, or SafeNet Fusion PIV product is available in this environment.",
     "catalogError": "Could not load the product catalog. Close this dialog and retry.",
+    "serialNumber": "Serial number",
+    "serialAuto": "Leave empty to generate one automatically.",
+    "serialInvalid": "Use 1 to 32 letters, digits, or dashes.",
+    "serialDuplicate": "A card with this serial number already exists in this organization.",
     "saveError": "Could not save the card. Check browser storage availability and retry.",
     "loadError": "Could not load virtual cards from browser storage.",
     "serverLoadError": "Could not load GoodKey jobs. Refresh the jobs after checking your connection.",
@@ -917,6 +921,7 @@
     "localOnly": "Local card",
     "pinAttempts": "PIN attempts: {{count}} / {{max}}",
     "pukAttempts": "PUK attempts: {{count}} / {{max}}",
+    "mgmAttempts": "MGM attempts: {{count}} / {{max}}",
     "keyCount": "Occupied slots: {{count}}",
     "open": "Open workspace",
     "empty": "Your first virtual card",
@@ -1070,6 +1075,7 @@
       "secret_required": "Administrative credential unavailable; refresh card state.",
       "mgm_required": "Enter the current management key.",
       "mgm_incorrect": "Incorrect management key. Check the value shown on the card.",
+      "mgm_blocked": "Management key is blocked. Reset the PIV profile.",
       "management_key_incorrect": "The current PIV management key from GoodKey was rejected by the card. No protected operation was performed.",
       "attestation_unavailable": "Card attestation is unavailable in this browser. Check browser storage and retry."
     },
@@ -1147,7 +1153,7 @@
       "taskPinPolicy": "This PIN does not match the task policy.",
       "generateFailed": "Could not generate a PIN for this policy. Enter one manually.",
       "mgm": "Current management key (MGM)",
-      "mgmPolicy": "Enter 48 hex characters (24 bytes, TDES) or 64 hex characters (32 bytes, AES)."
+      "mgmPolicy": "Enter 32, 48 or 64 hex characters (16, 24 or 32 bytes)."
     },
     "slotOccupied": "occupied",
     "slotEmpty": "empty",
