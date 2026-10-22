@@ -952,7 +952,7 @@
       "configured": "Configured",
       "blocked": "PIN blocked"
     },
-    "productSupport": "The demo supports the PIV profile of YubiKey 5, YubiKey 6 Dev, and SafeNet Fusion PIV products from your server catalog.",
+    "productSupport": "The demo supports the PIV profile of YubiKey 5, YubiKey 6 Dev, and SafeNet Fusion PIV products, and the PKCS#11 profile of SafeNet eToken 5110 products from your server catalog.",
     "noProducts": "No supported YubiKey 5, YubiKey 6 Dev, or SafeNet Fusion PIV product is available in this environment.",
     "catalogError": "Could not load the product catalog. Close this dialog and retry.",
     "serialNumber": "Serial number",
@@ -974,6 +974,7 @@
     "localOnly": "Local card",
     "pinAttempts": "PIN attempts: {{count}} / {{max}}",
     "pukAttempts": "PUK attempts: {{count}} / {{max}}",
+    "soAttempts": "SO PIN attempts: {{count}} / {{max}}",
     "mgmAttempts": "MGM attempts: {{count}} / {{max}}",
     "keyCount": "Occupied slots: {{count}}",
     "open": "Open workspace",
@@ -988,6 +989,13 @@
     "disconnect": "Remove card",
     "connect": "Connect card",
     "profile": "PIV profile",
+    "pkcs11Profile": "PKCS#11 profile",
+    "pkcs11": {
+      "slotName": {
+        "01": "Slot 01",
+        "02": "Slot 02"
+      }
+    },
     "goodkey": "GoodKey API",
     "serverDetails": "Open GoodKey record",
     "managedDelete": "Start managed deletion",
@@ -1006,7 +1014,16 @@
       "blockPin": "Block PIN",
       "importKey": "Import private key",
       "importCertificate": "Import certificate",
-      "generateKey": "Generate key only"
+      "generateKey": "Generate key only",
+      "pkcs11_key": "Key → CSR → certificate (PKCS#11)",
+      "pkcs11_generateKey": "Generate key only (PKCS#11)",
+      "pkcs11_csr": "Create CSR (PKCS#11)",
+      "pkcs11_certificate": "Create self-signed certificate (PKCS#11)",
+      "pkcs11_changePin": "Change PIN (PKCS#11)",
+      "pkcs11_recoverPin": "Recover PIN with SO (PKCS#11)",
+      "pkcs11_blockPin": "Block PIN (PKCS#11)",
+      "pkcs11_importKey": "Import private key (PKCS#11)",
+      "pkcs11_importCertificate": "Import certificate (PKCS#11)"
     },
     "scenarioHelp": {
       "key": "Generate or replace a slot key, create its CSR and install a matching self-signed certificate.",
@@ -1017,9 +1034,18 @@
       "blockPin": "Exhaust the PIN retry counter. Recovery requires the correct PUK.",
       "importKey": "Import an unencrypted PKCS#8 key into the selected slot, replacing an existing key and CSR. The certificate remains. The private key stays in browser storage.",
       "importCertificate": "Install or replace an X.509 certificate. It can be stored independently of a key.",
-      "generateKey": "Generate or replace only the key in the selected slot. An existing certificate remains."
+      "generateKey": "Generate or replace only the key in the selected slot. An existing certificate remains.",
+      "pkcs11_key": "Generate or replace a PKCS#11 slot key, create its CSR and install a matching self-signed certificate.",
+      "pkcs11_generateKey": "Generate or replace only the key in the selected PKCS#11 slot. An existing certificate remains.",
+      "pkcs11_csr": "Use the existing PKCS#11 slot key to sign a certificate signing request.",
+      "pkcs11_certificate": "Create and install a real X.509 certificate for the existing PKCS#11 key. Valid for 365 days.",
+      "pkcs11_changePin": "Verify the current user PIN, then replace it with a new PIN.",
+      "pkcs11_recoverPin": "Verify the SO PIN to set a new user PIN and restore its retry counter.",
+      "pkcs11_blockPin": "Exhaust the user PIN retry counter. Recovery requires the correct SO PIN.",
+      "pkcs11_importKey": "Import an unencrypted PKCS#8 key into the selected PKCS#11 slot. The private key stays in browser storage.",
+      "pkcs11_importCertificate": "Install or replace an X.509 certificate in the selected PKCS#11 slot."
     },
-    "slot": "PIV slot",
+    "slot": "Slot",
     "slotName": {
       "01": "Authentication",
       "02": "Digital signature",
@@ -1107,7 +1133,19 @@
       "piv_set_puk": "Set PIV PUK",
       "piv_reset": "Reset PIV profile",
       "fido2_reset": "Reset virtual FIDO2 state",
-      "fido_pin_change": "Change virtual FIDO2 PIN"
+      "fido_pin_change": "Change virtual FIDO2 PIN",
+      "pkcs11_key_generate": "Generate key (PKCS#11)",
+      "pkcs11_csr_create": "Create CSR (PKCS#11)",
+      "pkcs11_self_signed_cert_create": "Create self-signed certificate (PKCS#11)",
+      "pkcs11_cert_import": "Import certificate (PKCS#11)",
+      "pkcs11_key_import": "Import key (PKCS#11)",
+      "pkcs11_pin_change": "Change PIN (PKCS#11)",
+      "pkcs11_pin_recover": "Recover PIN (PKCS#11)",
+      "pkcs11_token_block": "Block token (PKCS#11)",
+      "pkcs11_set_so": "Set Security Officer (PKCS#11)",
+      "pkcs11_set_pin": "Set user PIN (PKCS#11)",
+      "pkcs11_reset": "Reset PKCS#11",
+      "pkcs11_cert_enroll_smime": "Enroll S/MIME certificate (PKCS#11)"
     },
     "error": {
       "pin_required": "Enter the current PIN.",
@@ -1194,6 +1232,7 @@
       "pin": "Current PIV PIN",
       "fidoPin": "Current FIDO2 PIN",
       "puk": "PUK",
+      "so": "SO PIN",
       "newPin": "New PIN",
       "useCurrent": "Use current",
       "useIncorrect": "Use wrong value",
@@ -1202,6 +1241,8 @@
       "hide": "Hide {{field}}",
       "required": "Enter a value.",
       "pivPinPolicy": "Use 6–8 digits and follow the task PIN policy.",
+      "pkcs11PinPolicy": "Use 6–8 digits and follow the task PIN policy.",
+      "pkcs11SoPolicy": "Use 6–8 digits and follow the task SO policy.",
       "fidoPinPolicy": "Use at least 4 characters, at most 63 UTF-8 bytes, and follow the task PIN policy.",
       "taskPinPolicy": "This PIN does not match the task policy.",
       "generateFailed": "Could not generate a PIN for this policy. Enter one manually.",
