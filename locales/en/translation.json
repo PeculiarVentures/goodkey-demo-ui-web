@@ -931,6 +931,56 @@
       "deleting": "Deleting",
       "deleted": "Deleted",
       "failed": "Failed"
+    },
+    "requests": {
+      "title": "Authenticator requests",
+      "description": "Holders can request PIN recovery. Owners, administrators, and security officers can review requests. Execution progress is shown on the linked job.",
+      "recoveryTitle": "PIN recovery",
+      "prerequisites": "The server validates the holder, policy, blocked PIN, available PUK/SO PIN, and duplicate requests or jobs. Both actions remain available for testing server responses.",
+      "policyLabel": "Authenticator PIN recovery policy",
+      "policy": {
+        "approval_required": "Approval required",
+        "allow_direct": "Direct recovery allowed",
+        "disabled": "Holder recovery disabled"
+      },
+      "create": "Request PIN recovery ({{profile}})",
+      "recover": "Recover PIN directly ({{profile}})",
+      "approve": "Approve",
+      "reject": "Reject",
+      "cancel": "Withdraw request",
+      "reason": "Rejection reason",
+      "reasonHint": "Optional, up to 1024 characters.",
+      "error": "Unable to complete the request.",
+      "authenticatorId": "Authenticator ID",
+      "openJob": "Open job",
+      "loadMore": "Load more",
+      "status": {
+        "pending": "Pending",
+        "approved": "Approved",
+        "rejected": "Rejected",
+        "canceled": "Canceled"
+      },
+      "type": {
+        "pin_recovery": "PIN recovery"
+      },
+      "blocked": {
+        "cardUnavailable": "The authenticator is currently unusable.",
+        "pinNotBlocked": "The server has no confirmed blocked PIN for this profile.",
+        "recoveryBlocked": "The PUK or SO PIN is blocked.",
+        "pendingRequest": "A request for this profile is already pending.",
+        "unfinishedJob": "A PIN recovery job is already in progress."
+      },
+      "columns": {
+        "authenticatorId": "Authenticator",
+        "type": "Request",
+        "profile": "Profile",
+        "status": "Status",
+        "requestedBy": "Requested by",
+        "createdAt": "Created",
+        "decision": "Decision / reason",
+        "job": "Job",
+        "actions": "Actions"
+      }
     }
   },
   "virtualCard": {
@@ -1349,6 +1399,13 @@
       "filterApi": "GoodKey API",
       "historyEmptyFilter": "No entries for this filter.",
       "dangerZone": "Danger zone"
+    },
+    "pinRecovery": {
+      "hint": "Block only the user PIN to test recovery, keeping the PUK/SO PIN usable. Bound cards automatically report the new state to GoodKey.",
+      "blockAndSync": "Block {{profile}} PIN and sync",
+      "block": "Block {{profile}} PIN",
+      "blockedSynced": "PIN blocked; the snapshot was synchronized with GoodKey. Open the server details to request recovery.",
+      "blockedLocal": "PIN blocked on the local virtual card."
     }
   },
   "cardJobs": {
