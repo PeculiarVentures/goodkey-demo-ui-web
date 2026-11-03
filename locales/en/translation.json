@@ -993,6 +993,8 @@
     },
     "requests": {
       "title": "Authenticator requests",
+      "shortTitle": "Requests",
+      "openRequests": "View requests",
       "description": "Holders can request PIN recovery. Owners, administrators, and security officers can review requests. Execution progress is shown on the linked job.",
       "recoveryTitle": "PIN recovery",
       "prerequisites": "The server validates the holder, policy, blocked PIN, available PUK/SO PIN, and duplicate requests or jobs. Both actions remain available for testing server responses.",
@@ -1079,6 +1081,19 @@
     "create": "Create virtual card",
     "delete": "Delete card",
     "deleteTitle": "Delete virtual card?",
+    "deleteOptions": {
+      "cardDescription": "Delete virtual card “{{name}}” ({{serial}}) from this browser?",
+      "server": "Delete from GoodKey",
+      "force": "Force delete on the server",
+      "managedHelp": "Managed deletion runs the card workflow automatically. Local data is kept if the workflow does not complete.",
+      "forceHelp": "Force deletion skips the card workflow.",
+      "interrupted": "Deletion was interrupted because the page changed.",
+      "changed": "The local card or its server binding changed. Refresh and try again.",
+      "pendingReports": "The card has unreported task results. Send them before deleting the server record.",
+      "missingJob": "The server did not provide a deletion job. The local card was kept.",
+      "serverDeletedLocalFailure": "The server record was deleted, but the local card could not be updated. Refresh and inspect the card before retrying.",
+      "workflowIncomplete": "Managed deletion did not complete. The local card was kept; inspect the deletion job and retry."
+    },
     "deleteLocalData": "This card's keys, certificates, PIN/PUK, history and pending task results will be permanently deleted from this browser. This cannot be undone.",
     "deleteServerUnchanged": "The GoodKey server record and jobs will remain unchanged. This local card will no longer be available to execute them.",
     "deleteError": "Could not delete the local card data. Check browser storage access and try again.",
@@ -1088,7 +1103,8 @@
     "initialStateHelp": "Starting credentials and retry state follow the selected virtual model.",
     "defaultCredentials": "Enter credentials only when an operation asks for them. GoodKey API operations obtain administrative secrets from the server.",
     "state": {
-      "factory": "Factory state",
+      "factory": "Uninitialized",
+      "initializedDefault": "Initialized with default credentials",
       "configured": "Configured",
       "blocked": "PIN blocked"
     },
@@ -1116,6 +1132,23 @@
     "pukAttempts": "PUK attempts: {{count}} / {{max}}",
     "soAttempts": "SO PIN attempts: {{count}} / {{max}}",
     "mgmAttempts": "MGM attempts: {{count}} / {{max}}",
+    "mgmUnlimited": "MGM attempts: unlimited",
+    "fidoProfile": "FIDO2 profile",
+    "fidoControls": {
+      "block": "Block PIN",
+      "blockAria": "Block FIDO2 PIN",
+      "reset": "Reset FIDO2",
+      "resetTitle": "Reset the FIDO2 profile?",
+      "resetDescription": "This removes the FIDO2 PIN and all FIDO2 credentials from this virtual card.",
+      "stateChanged": "The FIDO2 PIN is no longer blocked. Refresh the card before trying again.",
+      "blockHistory": "FIDO2 PIN blocked.",
+      "resetHistory": "FIDO2 profile reset.",
+      "blockSynced": "FIDO2 PIN blocked and profile synced to GoodKey.",
+      "blockLocal": "FIDO2 PIN blocked on the virtual card.",
+      "resetSynced": "FIDO2 profile reset and synced to GoodKey.",
+      "resetLocal": "FIDO2 profile reset on the virtual card."
+    },
+    "fidoCredentialsCount": "Credentials: {{count}} / {{max}}",
     "keyCount": "Occupied slots: {{count}}",
     "open": "Open workspace",
     "empty": "Your first virtual card",
@@ -1490,6 +1523,8 @@
       "dangerZone": "Danger zone"
     },
     "pinRecovery": {
+      "blockShort": "Block PIN",
+      "blockProfile": "Block PIN ({{profile}})",
       "hint": "Block only the user PIN to test recovery, keeping the PUK/SO PIN usable. Bound cards automatically report the new state to GoodKey.",
       "blockAndSync": "Block {{profile}} PIN and sync",
       "block": "Block {{profile}} PIN",
@@ -1504,7 +1539,8 @@
     "credentialMaxBytes": "UTF-8 byte limit: {{count}}.",
     "initialCredentialsHelp": "These values belong to the new local card. Enter a credential only when an operation asks for it. GoodKey API operations obtain administrative secrets from the server.",
     "initialStateHint": {
-      "factory": "Starts with this model’s factory credentials.",
+      "factory": "The card is not initialized. The simulator uses its initial credentials during registration.",
+      "initializedDefault": "The card is initialized with this model’s default credentials; they are sent during registration.",
       "configured": "Starts with configured credentials, ready for initial capture during registration.",
       "blocked": "Starts with no remaining user PIN attempts. Administrative credentials keep their initial retry budgets."
     },
