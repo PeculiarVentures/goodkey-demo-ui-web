@@ -1119,7 +1119,7 @@
     "loadError": "Could not load virtual cards from browser storage.",
     "serverLoadError": "Could not load GoodKey jobs. Refresh the jobs after checking your connection.",
     "environment": "GoodKey environment",
-    "storageNote": "Cards and their private keys stay in this browser, scoped to the server and organization. Clearing site data removes them. Attestation uses a local browser root; it is not hardware attestation.",
+    "storageNote": "Cards and their private keys stay in this browser, scoped to the server and organization. Clearing site data removes them. Models that support attestation use a local browser root; it is not hardware attestation.",
     "virtual": "Virtual",
     "badge": "Virtual",
     "useWorkspace": "Open virtual card",
