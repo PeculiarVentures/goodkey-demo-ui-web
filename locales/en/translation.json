@@ -812,7 +812,8 @@
       "type": {
         "registration": "Registration",
         "deletion": "Deletion",
-        "update": "Update"
+        "update": "Update",
+        "profile_reset": "Profile reset"
       },
       "source": {
         "system": "System",
@@ -989,13 +990,14 @@
       "active": "Active",
       "deleting": "Deleting",
       "deleted": "Deleted",
-      "failed": "Failed"
+      "failed": "Failed",
+      "lost": "Lost"
     },
     "requests": {
       "title": "Authenticator requests",
       "shortTitle": "Requests",
       "openRequests": "View requests",
-      "description": "Holders can request PIN recovery. Owners, administrators, and security officers can review requests. Execution progress is shown on the linked job.",
+      "description": "Holders can request PIN recovery or a profile reset. Owners, administrators, and security officers can review requests. Execution progress is shown on the linked job.",
       "recoveryTitle": "PIN recovery",
       "prerequisites": "The server validates the holder, policy, blocked PIN, available PUK/SO PIN, and duplicate requests or jobs. Both actions remain available for testing server responses.",
       "policyLabel": "Authenticator PIN recovery policy",
@@ -1022,7 +1024,8 @@
         "canceled": "Canceled"
       },
       "type": {
-        "pin_recovery": "PIN recovery"
+        "pin_recovery": "PIN recovery",
+        "profile_reset": "Profile reset"
       },
       "blocked": {
         "cardUnavailable": "The authenticator is currently unusable.",
@@ -1073,6 +1076,26 @@
       "unknown": "Unknown",
       "apiAuthority": "Diagnostics use the available card and API profile data. Client metadata from a token does not prove authorization. The API makes the final decision for the session, holder, task and exact secret version.",
       "diagnosticWarning": "The visible state does not meet the reveal requirements. You can still submit to inspect the API response."
+    },
+    "profileReset": {
+      "title": "Profile reset",
+      "description": "Reset one profile while keeping the authenticator registered and active. Other profiles are preserved.",
+      "direct": "Reset {{profile}}",
+      "request": "Request {{profile}} reset",
+      "approve": "Approve {{profile}} reset",
+      "authenticatorKeyResetPolicy": "PIV / PKCS#11 reset policy",
+      "authenticatorFido2ResetPolicy": "FIDO2 reset policy",
+      "policy": {
+        "approval_required": "Approval required",
+        "allow_direct": "Direct reset allowed",
+        "disabled": "Holder reset disabled"
+      },
+      "keysWarning": "Reset permanently removes all keys and certificates in this profile and resets its PIN. This cannot be undone.",
+      "fido2Warning": "Reset permanently removes all passkeys and the PIN in the FIDO2 profile. Access to services using those passkeys may be lost. This cannot be undone.",
+      "requestHelp": "This submits a request for review. The profile changes only when the approved workflow runs on the card.",
+      "executionHelp": "The reset creates a server workflow. Execute it with the companion app or open the virtual card executor. Finish the required secret rotation and PIN setup steps.",
+      "cancelHelp": "A profile reset can be canceled only before any task starts. After it starts, finish the workflow to settle the card state.",
+      "pkcs11Warning": "Reset permanently removes all keys, certificates, and the user PIN in this PKCS#11 profile. The workflow then rotates the SO PIN and sets up a new user PIN. This cannot be undone."
     }
   },
   "virtualCard": {
@@ -1419,7 +1442,8 @@
       "taskPinPolicy": "This PIN does not match the task policy.",
       "generateFailed": "Could not generate a PIN for this policy. Enter one manually.",
       "mgm": "Current management key (MGM)",
-      "mgmPolicy": "Enter 32, 48 or 64 hex characters (16, 24 or 32 bytes)."
+      "mgmPolicy": "Enter 32, 48 or 64 hex characters (16, 24 or 32 bytes).",
+      "userPinUninitialized": "User PIN is not initialized"
     },
     "slotOccupied": "occupied",
     "slotEmpty": "empty",
