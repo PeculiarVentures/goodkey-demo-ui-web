@@ -997,7 +997,7 @@
       "title": "Authenticator requests",
       "shortTitle": "Requests",
       "openRequests": "View requests",
-      "description": "Holders can request PIN recovery or a profile reset. Owners, administrators, and security officers can review requests. Execution progress is shown on the linked job.",
+      "description": "Holders can request PIN recovery, profile reset, or unregistration. Reviewers approve or reject requests. Job progress is separate from the decision.",
       "recoveryTitle": "PIN recovery",
       "prerequisites": "The server validates the holder, policy, blocked PIN, available PUK/SO PIN, and duplicate requests or jobs. Both actions remain available for testing server responses.",
       "policyLabel": "Authenticator PIN recovery policy",
@@ -1025,14 +1025,16 @@
       },
       "type": {
         "pin_recovery": "PIN recovery",
-        "profile_reset": "Profile reset"
+        "profile_reset": "Profile reset",
+        "unregistration": "Unregistration"
       },
       "blocked": {
         "cardUnavailable": "The authenticator is currently unusable.",
         "pinNotBlocked": "The server has no confirmed blocked PIN for this profile.",
         "recoveryBlocked": "The PUK or SO PIN is blocked.",
         "pendingRequest": "A request for this profile is already pending.",
-        "unfinishedJob": "A PIN recovery job is already in progress."
+        "unfinishedJob": "A PIN recovery job is already in progress.",
+        "unregistrationPending": "An unregistration request is pending for this card. Withdraw it or wait for a decision before continuing PIN recovery or profile reset."
       },
       "columns": {
         "authenticatorId": "Authenticator",
@@ -1083,7 +1085,7 @@
       "direct": "Reset {{profile}}",
       "request": "Request {{profile}} reset",
       "approve": "Approve {{profile}} reset",
-      "authenticatorKeyResetPolicy": "PIV / PKCS#11 reset policy",
+      "authenticatorKeyResetPolicy": "PIV / PKCS#11 reset and unregistration policy",
       "authenticatorFido2ResetPolicy": "FIDO2 reset policy",
       "policy": {
         "approval_required": "Approval required",
@@ -1096,13 +1098,43 @@
       "executionHelp": "The reset creates a server workflow. Execute it with the companion app or open the virtual card executor. Finish the required secret rotation and PIN setup steps.",
       "cancelHelp": "A profile reset can be canceled only before any task starts. After it starts, finish the workflow to settle the card state.",
       "pkcs11Warning": "Reset permanently removes all keys, certificates, and the user PIN in this PKCS#11 profile. The workflow then rotates the SO PIN and sets up a new user PIN. This cannot be undone."
+    },
+    "management": {
+      "title": "Card management",
+      "removeTitle": "Remove this card from the organization",
+      "request": "Request unregistration",
+      "direct": "Unregister card",
+      "approve": "Approve unregistration",
+      "lost": "Report lost",
+      "force": "Delete record without the card",
+      "wholeCard": "Whole card",
+      "requestHelp": "Send an unregistration request for review. The card remains active until deletion starts. You can withdraw the pending request.",
+      "directHelp": "Start the managed deletion workflow for this card. The card becomes deleted only after the workflow completes successfully.",
+      "approveHelp": "Approve the request and create a deletion job. Approval is recorded separately from job execution.",
+      "lostHelp": "Immediately mark this card as lost without administrator approval or access to the device. Unfinished jobs and pending requests will be closed.",
+      "forceHelp": "Remove the server record without running a physical-card workflow. This administrative action preserves audit history.",
+      "deletionWarning": "The card is required to complete deletion. The configured workflow may permanently remove keys, certificates, passkeys, and other card data.",
+      "lostWarning": "The previous registration cannot be restored after reporting loss. GoodKey operations are blocked, but data on the missing card cannot be erased remotely.",
+      "forceWarning": "Keys and other data on the device are not erased. For a lost or stolen card, report loss before deleting its record.",
+      "localPreserved": "A local virtual card is retained. Deleting its browser copy is a separate action.",
+      "lostTitle": "Card lost or stolen",
+      "lostDescription": "Report loss immediately. The card does not need to be connected.",
+      "pending": "Unregistration is awaiting review. The card remains active. Withdraw this request to resume holder PIN recovery and profile resets.",
+      "pendingError": "An unregistration request is pending for this card. Withdraw it or wait for a decision before continuing PIN recovery or profile reset.",
+      "deleting": "Deletion has started. Complete the linked job with the companion app or the virtual card executor. Approval alone does not complete deletion.",
+      "lostState": "This card has been reported lost. GoodKey operations and restoration of the previous registration are unavailable.",
+      "policy": {
+        "approval_required": "Holder unregistration requires administrator approval.",
+        "allow_direct": "Holders may unregister their own card directly.",
+        "disabled": "Holder unregistration is disabled by the organization."
+      }
     }
   },
   "virtualCard": {
     "title": "Virtual cards",
     "description": "Create a virtual smart card and rehearse complete GoodKey workflows without hardware.",
     "create": "Create virtual card",
-    "delete": "Delete card",
+    "delete": "Delete local card",
     "deleteTitle": "Delete virtual card?",
     "deleteOptions": {
       "cardDescription": "Delete virtual card “{{name}}” ({{serial}}) from this browser?",
