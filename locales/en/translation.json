@@ -1,9 +1,77 @@
 {
+  "memberRole": {
+    "label": "Role for {{member}}"
+  },
+  "fileDrop": {
+    "choose": "Choose a file or drop it here"
+  },
+  "infoNotice": {
+    "dismiss": "Dismiss notice"
+  },
+  "formFeedback": {
+    "invalid": "Check the form values and try again.",
+    "invalidDate": "Enter a valid date.",
+    "forbidden": "You do not have permission to complete this action.",
+    "missing": "The selected resource is no longer available.",
+    "conflict": "The request conflicts with an existing record or its current state.",
+    "rateLimit": "Too many requests. Wait a moment before trying again.",
+    "privateIp": "Private and local IP addresses are not allowed.",
+    "failed": "Unable to complete the request.",
+    "code": "Error code: {{code}}",
+    "status": "HTTP status: {{status}}",
+    "missingAlgorithms": "Choose at least one algorithm.",
+    "authorizationFailed": "Authorization failed.",
+    "invalidTokenType": "This access token type is invalid.",
+    "serviceManagedKey": "Keys managed by the service cannot be used for cryptographic operations.",
+    "multipleAlgorithmsUnsupported": "The selected provider supports only one algorithm per key.",
+    "tokenAccessDenied": "You do not have permission to manage this access token.",
+    "unconfirmed": "GoodKey could not confirm the change. Check the record before trying again."
+  },
+  "tokenIssuance": {
+    "created": "Access token created",
+    "regenerated": "Access token regenerated",
+    "oneTime": "Store this value securely. You can only access it before closing this result.",
+    "value": "Token value",
+    "hidden": "Token value hidden",
+    "reveal": "Reveal token",
+    "hide": "Hide token",
+    "copy": "Copy token",
+    "copied": "Token copied to the clipboard.",
+    "copyFailed": "Could not copy the token. Try again or reveal it to copy manually.",
+    "close": "Done"
+  },
   "selfSignedCertificateCreated": "Self-signed certificate created successfully",
   "selfSignedCertificateCreatedAndCopied": "Self-signed certificate created successfully and copied to clipboard in PEM format",
   "unknownErrorOccurred": "An unknown error occurred",
   "certificateCreatedSuccessfully": "Certificate created successfully",
   "certificate": {
+    "x509": {
+      "attribute": "Attribute",
+      "attributeValue": "Attribute value",
+      "removeAttribute": "Remove attribute",
+      "addAttribute": "Add attribute",
+      "oid": "Extension OID",
+      "invalidOid": "Enter a dotted object identifier.",
+      "critical": "Critical",
+      "removeExtension": "Remove extension",
+      "extensionValue": "Base64url-encoded DER value",
+      "addExtension": "Add extension",
+      "keyUsage": "Key usage",
+      "basicConstraints": "Basic constraints",
+      "ca": "Certificate authority",
+      "pathLength": "Path length",
+      "usage": {
+        "digitalSignature": "Digital signature",
+        "dataEncipherment": "Data encipherment",
+        "keyEncipherment": "Key encipherment",
+        "keyAgreement": "Key agreement",
+        "keyCertSign": "Certificate signing",
+        "cRLSign": "CRL signing",
+        "encipherOnly": "Encipher only",
+        "decipherOnly": "Decipher only",
+        "nonRepudiation": "Non-repudiation"
+      }
+    },
     "common": "Certificate",
     "description": "View and manage your certificate",
     "import": {
@@ -25,6 +93,10 @@
       "success": "Certificate imported successfully"
     },
     "create": {
+      "copyPem": "Copy PEM",
+      "clipboardError": "The clipboard could not be opened. Copy the PEM manually.",
+      "resultTitle": "Certificate created",
+      "csrSuccess": "Certificate request created successfully.",
       "title": "Create Certificate",
       "steps": {
         "type": "Select Certificate Type",
@@ -45,6 +117,9 @@
       "completed": "All steps completed - you're finished",
       "reset": "Reset",
       "error": {
+        "invalidName": "Enter a name of up to 128 characters with no surrounding whitespace.",
+        "invalidDate": "Enter a valid date.",
+        "invalidDateRange": "The end date must be on or after the start date.",
         "algorithmNotSelected": "Algorithm is not selected",
         "invalidType": "Invalid certificate type",
         "organizationIdRequired": "Organization ID is required"
@@ -56,6 +131,7 @@
       "success": "Certificate updated successfully"
     },
     "delete": {
+      "codeRequested": "Deletion code requested. Check your email.",
       "common": "Delete certificate",
       "description": "Delete the certificate",
       "code": "Enter the activation code to delete the certificate",
@@ -70,12 +146,42 @@
   "certificates": "Certificates",
   "certificatesOrgDescription": "Manage your certificates of the organization",
   "certificatesKeyDescription": "Manage your certificates of the key",
+  "shell": {
+    "navigation": "Navigation",
+    "closeNavigation": "Close navigation",
+    "accountMenu": "Account menu",
+    "organizationCatalog": "Open the organization catalog ({{organization}})",
+    "organizationSwitcher": "Switch organization ({{organization}})",
+    "organizationsLoading": "Loading organizations…",
+    "organizationsError": "Could not load organizations.",
+    "organizationsEmpty": "No organizations available.",
+    "organizationsAll": "All organizations",
+    "environment": "API environment",
+    "environmentWithHost": "API environment {{host}}",
+    "apiBaseUrl": "API base URL",
+    "application": "Application",
+    "breadcrumb": "Breadcrumb",
+    "showBreadcrumbs": "Show more of the breadcrumb",
+    "keyNavigation": "Key sections",
+    "certificateNavigation": "Certificate sections",
+    "authenticatorNavigation": "Authenticator sections",
+    "authenticatorJobNavigation": "Job sections"
+  },
+  "appSettings": {
+    "returnToProfile": "Back to profile",
+    "returnToPreviousPage": "Back to previous page",
+    "returnToKeys": "Back to keys",
+    "returnToKey": "Back to the key",
+    "appliesImmediately": "Changes apply immediately in this browser.",
+    "saveFailed": "Could not apply the setting. Try again."
+  },
   "settings": "Settings",
   "common": "Common",
   "settingsDescription": "Set up your application here",
   "profile": {
     "common": "Profile",
     "description": "View and manage your profile",
+    "validationError": "Could not verify your session.",
     "logout": {
       "common": "Logout",
       "confirmation": "Are you sure you want to logout?"
@@ -100,6 +206,7 @@
       "cryptoPeriodGuidance": "Crypto period guidance"
     },
     "leave": {
+      "action": "Leave",
       "common": "Leave organization",
       "confirmation": "Are you sure you want to leave the organization?",
       "success": "You have successfully left the organization"
@@ -116,11 +223,12 @@
       "deleted": "Organization member successfully deleted",
       "updated": "Organization member successfully updated",
       "status": {
-        "active": "active",
-        "invited": "invited",
-        "rejected": "rejected"
+        "active": "Active",
+        "invited": "Invited",
+        "rejected": "Rejected"
       },
       "inviteDialog": {
+        "success": "Member invited.",
         "title": "Invite New Member",
         "invite": "Invite"
       }
@@ -134,7 +242,8 @@
       },
       "refresh": {
         "title": "Refresh Access Token",
-        "description": "Refreshing the access token will generate a new token value."
+        "description": "Refreshing the access token will generate a new token value.",
+        "noExpiration": "Issue without an expiration date"
       },
       "fields": {
         "ips": "IPs",
@@ -147,6 +256,42 @@
         "idsRequired": "Organization ID and Token ID are required"
       }
     }
+  },
+  "tokenForm": {
+    "details": "Details",
+    "permissions": "Permissions and restrictions",
+    "summary": "Token summary",
+    "type": "Token type",
+    "invalidName": "Use up to 128 characters with no leading or trailing spaces.",
+    "descriptionRequired": "Enter a replacement for the existing description.",
+    "optionalExpiration": "Optional. Leave blank for a token with no expiration date.",
+    "invalidExpiration": "Choose a valid expiration date in the future.",
+    "scopesSelected": "Selected ({{count}})",
+    "scopesAll": "All scopes ({{count}})",
+    "scopesNone": "No scopes granted",
+    "ipsHelp": "Enter an IP address or CIDR range and press Enter. An empty list allows any IP address.",
+    "ipsAny": "Any IP address",
+    "keysLimit": "Restrict access to selected keys",
+    "keysHelp": "An empty list allows no keys.",
+    "keysLoading": "Loading keys…",
+    "keysEmpty": "No keys available.",
+    "keysError": "Could not load keys.",
+    "keysMoreError": "Could not load more keys.",
+    "keysRetry": "Retry loading keys",
+    "keysAny": "No key restriction",
+    "keysNone": "No keys allowed",
+    "keysUnknown": "The server did not return this token’s key restriction.",
+    "certificatesLimit": "Restrict access to selected certificates",
+    "certificatesHelp": "An empty list allows no certificates.",
+    "certificatesLoading": "Loading certificates…",
+    "certificatesEmpty": "No certificates available.",
+    "certificatesError": "Could not load certificates.",
+    "certificatesMoreError": "Could not load more certificates.",
+    "certificatesRetry": "Retry loading certificates",
+    "certificatesAny": "No certificate restriction",
+    "certificatesNone": "No certificates allowed",
+    "certificatesUnknown": "The server did not return this token’s certificate restriction.",
+    "resourceLimitUnknown": "Restriction unavailable"
   },
   "organizationRole": {
     "owner": {
@@ -171,6 +316,8 @@
     }
   },
   "invitations": {
+    "accepted": "Invitation accepted.",
+    "declined": "Invitation declined.",
     "common": "Invitations",
     "description": "Manage your invitations",
     "acceptConfirmation": "Are you sure you want to accept the invitation?",
@@ -187,6 +334,8 @@
     "description": "Manage your groups"
   },
   "group": {
+    "create": "Create group",
+    "edit": "Edit group",
     "common": "Group",
     "description": "View and manage your group",
     "created": "Group created successfully",
@@ -194,12 +343,17 @@
     "deleted": "Group deleted successfully",
     "deleteConfirmation": "Are you sure you want to delete the group? This action cannot be undone.",
     "notFound": "Group not found",
+    "selectFromList": "Select the group from this organization’s groups list to view its details.",
     "backToList": "Back to groups",
     "members": {
       "common": "Members",
       "description": "Manage group members"
     },
     "member": {
+      "added": "Member added to the group.",
+      "removed": "Member removed from the group.",
+      "loadError": "Could not load members.",
+      "empty": "No members available.",
       "common": "Member",
       "description": "View and manage group member",
       "create": "Add member",
@@ -211,7 +365,170 @@
   },
   "audit": {
     "common": "Audit",
-    "description": "View and manage audit logs"
+    "description": "View and manage audit logs",
+    "searchByAction": "Filter by action",
+    "event": "Audit event",
+    "eventUnavailable": "Open an event from the audit log to see its details.",
+    "context": "Client details",
+    "fullDetails": "Full event details",
+    "backToList": "Back to audit log",
+    "actor": "Actor",
+    "serviceActor": "Service",
+    "initiatedBy": "Initiated by",
+    "authentication": "Authentication",
+    "route": "API route",
+    "certificatePem": "Public certificate (PEM)",
+    "sortTies": "Sort events with the same timestamp",
+    "timestampOnly": "Use default order for matching timestamps",
+    "changedFields": "Changed fields",
+    "supersededVersions": "Superseded versions",
+    "sections": {
+      "workflow": "Authenticator workflow",
+      "request": "Request",
+      "task": "Task",
+      "taskChange": "Task change",
+      "version": "Secret version",
+      "secret": "Secret metadata",
+      "credentialState": "Credential state",
+      "member": "Member",
+      "integration": "Integration",
+      "workspace": "Workspace",
+      "location": "Location",
+      "confirmation": "Passkey confirmation"
+    },
+    "actionNames": {
+      "format": "{{object}} {{verb}}",
+      "objects": {
+        "task": "Task",
+        "job": "Job",
+        "request": "Request",
+        "secretVersion": "Secret version",
+        "secret": "Secret",
+        "workflow": "Workflow",
+        "label": "Label",
+        "credential": "Credential",
+        "device": "Device",
+        "certificate": "Certificate",
+        "keyOperation": "Key operation",
+        "keyMember": "Key member",
+        "key": "Key",
+        "groupMember": "Group member",
+        "group": "Group",
+        "organization": "Organization"
+      },
+      "verbs": {
+        "create": "created",
+        "update": "updated",
+        "delete": "deleted",
+        "start": "started",
+        "complete": "completed",
+        "fail": "failed",
+        "cancel": "canceled",
+        "activate": "activated",
+        "deactivate": "deactivated",
+        "approve": "approved",
+        "reject": "rejected",
+        "reveal": "revealed",
+        "read": "read",
+        "register": "registered",
+        "sync": "synchronized",
+        "refresh": "refreshed",
+        "restore": "restored",
+        "report_lost": "reported lost",
+        "attach": "attached",
+        "detach": "detached",
+        "import": "imported",
+        "download": "downloaded",
+        "add": "added",
+        "finalize": "finalized",
+        "abort": "aborted",
+        "apply": "applied",
+        "promote": "promoted",
+        "revoke": "revoked",
+        "expire": "expired",
+        "generated": "generated",
+        "initial_captured": "initial value captured",
+        "history_read": "history read",
+        "value_read": "value read",
+        "lease_create": "lease created",
+        "state_change": "state changed",
+        "enroll_csr": "issued from CSR",
+        "enroll_selfsigned": "self-signed issued",
+        "enroll_sshproof": "issued with SSH proof",
+        "read_public": "public key read",
+        "card_mutation_started": "card change started",
+        "recovery_required": "recovery required",
+        "secrets_applied": "secrets applied",
+        "bootstrap_secrets_create": "initial secrets created",
+        "pending_secrets_create": "pending secrets created",
+        "version_create": "version created",
+        "version_apply": "version applied",
+        "version_expire": "version expired",
+        "version_promote": "version promoted",
+        "version_revoke": "version revoked",
+        "credential_state_change": "PIN/PUK state changed"
+      }
+    },
+    "actionCode": "Event code"
+  },
+  "catalogDetails": {
+    "roleInfo": "Role information",
+    "activity": "Activity",
+    "capabilities": "Capabilities",
+    "contact": "Contact",
+    "hardware": "Hardware",
+    "record": "Device record",
+    "loadError": "Could not load the details.",
+    "manage": "Manage",
+    "category": "Category",
+    "platform": "Platform",
+    "attestationSupported": "Attestation supported",
+    "deprecated": "Deprecated",
+    "providerNavigation": "Provider sections",
+    "groupNavigation": "Group sections",
+    "digest": "Digest",
+    "avatar": "Image",
+    "thumbprint": "SHA-256 thumbprint",
+    "sshKeyId": "SSH certificate key ID",
+    "validity": "Validity",
+    "parsedCertificate": "Certificate fields",
+    "keyMemberId": "Key member ID",
+    "memberId": "Membership ID",
+    "userId": "User ID",
+    "organizationId": "Organization ID",
+    "groupId": "Group ID",
+    "keyRole": "Key role",
+    "slackUserId": "Slack user ID",
+    "raIntegration": "Registration authority integration",
+    "features": "Enabled features",
+    "policies": "Policies",
+    "quotas": "Quotas",
+    "quota": "Quota",
+    "currentUserMember": "You are a member",
+    "memberCount_one": "{{count}} member",
+    "memberCount_few": "{{count}} members",
+    "memberCount_many": "{{count}} members",
+    "memberCount_other": "{{count}} members",
+    "approvalsRemaining": "Approvals remaining",
+    "approvalsRequired": "Approvals required",
+    "createdBy": "Created by",
+    "saltLength": "Salt length",
+    "provided": "Provided",
+    "certificateType": {
+      "x509": "X.509 certificate",
+      "ssh": "SSH certificate",
+      "csr": "Certificate request"
+    },
+    "organizationFeatures": {
+      "authenticators": "Authenticators",
+      "operations_dashboard": "Operations dashboard",
+      "smime_enroll": "S/MIME enrollment"
+    },
+    "operationInput": {
+      "label": "Label",
+      "public": "Peer public key",
+      "cipherText": "Ciphertext"
+    }
   },
   "id": "ID",
   "members": "Members",
@@ -221,7 +538,10 @@
   },
   "token": {
     "common": "Access token",
+    "manage": "Manage token",
+    "navigation": "Token pages",
     "description": "View and manage your access token",
+    "loadError": "Could not load this access token.",
     "created": "Token created successfully",
     "regenerate": "Token regenerated successfully",
     "updated": "Token updated successfully",
@@ -335,6 +655,10 @@
   "login": {
     "auth_instructions": "The application will navigate to the authorization page. After authentication, it will return with a code that will be automatically filled in the <code>Grant Code</code> field.",
     "auth_instructions_prod": "Paste your access token below. Authorization via the link is not available on the production server.",
+    "signInMethod": "Sign-in method",
+    "withAuthorization": "Use authorization",
+    "withToken": "Use an access token",
+    "selectedScopes": "Selected scopes ({{count}})",
     "auth_token": "If you already have a token, you can paste it below.",
     "clientMode": "Sign in as",
     "demoClient": "Demo UI",
@@ -393,11 +717,53 @@
     "appAuthorizeHint": "Open GoodKey App sign-in in another tab and complete authorization.",
     "appStepCallback": "2. Paste the callback",
     "appStepSignIn": "3. Sign in",
-    "appAdvanced": "Advanced: client configuration and scopes"
+    "appAdvanced": "Advanced: client configuration and scopes",
+    "demoCodeFailed": "Could not exchange the grant code. Check the code or open authorization again.",
+    "tokenRejected": "The server rejected this access token. Check the environment and token.",
+    "signInFailed": "Could not sign in. Check the environment and try again.",
+    "appErrors": {
+      "serverUrl": "Check the secure API and identity provider URLs in the selected environment.",
+      "redirect": "Enter a valid registered callback URL.",
+      "clientId": "Enter the App client ID without spaces.",
+      "provider": "App authorization failed. Start a new App sign-in and try again.",
+      "providerConfig": "The identity provider settings do not match the selected environment.",
+      "scopes": "Choose valid access scopes.",
+      "expired": "This App sign-in has expired or was already used. Start a new App sign-in.",
+      "callback": "Paste the complete App callback URL, including its state parameter.",
+      "callbackRedirect": "The callback URL does not match the registered URL for this App sign-in.",
+      "callbackDuplicate": "The callback URL contains duplicate authorization parameters.",
+      "callbackState": "The callback state does not match this App sign-in.",
+      "refused": "The identity provider declined authorization. Start a new App sign-in.",
+      "callbackIssuer": "The callback issuer does not match the selected environment.",
+      "callbackCode": "The callback URL is missing an authorization code."
+    }
   },
   "grantCode": "Grant code",
   "openAuthLink": "Open authorization link",
   "copy": "Copy",
+  "propertyValue": {
+    "missing": "Not provided",
+    "null": "No value (null)",
+    "emptyString": "Empty string",
+    "copy": "Copy {{label}}",
+    "copyFailed": "Could not copy to the clipboard.",
+    "originalDate": "Original timestamp {{value}}",
+    "items_one": "{{count}} item",
+    "items_other": "{{count}} items",
+    "fields_one": "{{count}} field",
+    "fields_other": "{{count}} fields",
+    "moreItems_one": "Show {{count}} more item",
+    "moreItems_other": "Show {{count}} more items"
+  },
+  "resourceDate": {
+    "invalid": "Invalid date",
+    "exactTime": "Exact timestamp {{value}}",
+    "expiry": {
+      "tomorrow": "Expires tomorrow",
+      "today": "Expires today",
+      "elapsed": "Expiry passed"
+    }
+  },
   "copiedToClipboard": "Value was copied to clipboard",
   "copyToken": "Copy token",
   "tokenCopied": "Token copied",
@@ -420,6 +786,34 @@
   "provider": {
     "common": "Provider",
     "description": "View and manage your provider"
+  },
+  "keyWizard": {
+    "organizationContext": "Organization {{id}}",
+    "step": "Step {{number}} of {{total}}",
+    "providerId": "Provider ID",
+    "keyId": "Key ID",
+    "created": "Key created",
+    "openKey": "Open key",
+    "close": "Close",
+    "checkCatalog": "Check the keys catalog",
+    "uncertain": "GoodKey did not confirm whether the key was created. Check the keys catalog before trying again.",
+    "invalidName": "Enter a name of 1–128 characters without leading or trailing spaces.",
+    "invalidExpiration": "Choose a valid expiration date in the future.",
+    "filterHelp": "Use size, usage and mode to narrow the list of algorithms.",
+    "selectOne": "This provider supports one algorithm per key.",
+    "incompatibleAlgorithms": "Clear the current selection to choose a different key size or curve.",
+    "lookup": {
+      "providers": {
+        "loading": "Loading key providers…",
+        "error": "Could not load key providers.",
+        "empty": "There are no key providers in this organization."
+      },
+      "algorithms": {
+        "loading": "Loading algorithms for this provider…",
+        "error": "Could not load algorithms for this provider.",
+        "empty": "This provider has no available algorithms."
+      }
+    }
   },
   "key": {
     "common": "Key",
@@ -444,6 +838,9 @@
         "description": "Review key settings"
       },
       "error": {
+        "noAlgorithms": "This key has no algorithms for these operations.",
+        "invalidSalt": "Enter a whole number from 0 to {{max}}.",
+        "invalidLabel": "Use only single-byte characters.",
         "organizationIdRequired": "Organization ID is required"
       }
     },
@@ -463,7 +860,38 @@
     "imported": "Key imported successfully",
     "preDeleted": "Deletion code requested successfully. Check your email for the code",
     "deleted": "Key deleted successfully",
+    "detail": {
+      "additional": "Additional properties",
+      "actions": "Key actions",
+      "manage": "Manage key",
+      "edit": "Edit key",
+      "delete": "Delete key",
+      "transferToOrganization": "Transfer ownership to the organization",
+      "memberLoadError": "Couldn’t load organization members. Reopen the dialog to try again.",
+      "serviceManaged": "The service that manages this key controls its name, quorum, activation, deactivation, and deletion.",
+      "notFound": "Key not found",
+      "accessDenied": "Access denied",
+      "backToKeys": "Back to keys"
+    },
+    "lifecycle": {
+      "status": {
+        "active": "Active",
+        "inactive": "Inactive",
+        "expired": "Expired",
+        "pending_generation": "Pending generation",
+        "pending_import": "Pending import",
+        "pending_deletion": "Pending deletion"
+      },
+      "generationFailed": "Key generation failed",
+      "importFailed": "Key import failed",
+      "deletionFailed": "Key deletion failed",
+      "error": "Key lifecycle error"
+    },
+    "loadError": "Could not load this key.",
+    "deleteCodeDescription": "Enter the deletion code you received by email.",
     "publicKey": {
+      "downloaded": "Public key downloaded.",
+      "copied": "Public key copied to the clipboard.",
       "common": "Public key",
       "download": "Download public key",
       "copy": "Copy public key"
@@ -568,6 +996,13 @@
       "success": "Operation rejected successfully"
     },
     "finalize": {
+      "result": {
+        "hidden": "Result hidden",
+        "reveal": "Reveal result",
+        "hide": "Hide result",
+        "copyFailed": "Could not copy the result.",
+        "download": "Download"
+      },
       "common": "Finalize operation",
       "description": "Finalize the operation",
       "confirmation": "Are you sure you want to finalize the operation?",
@@ -619,10 +1054,44 @@
   "personalKey": "Personal key",
   "keys": "Keys",
   "keysDescription": "Manage your keys",
+  "catalog": {
+    "viewDetails": "View details"
+  },
+  "tokenCatalog": {
+    "moreSortColumns": "Sort by another column",
+    "asc": "{{field}}, ascending",
+    "desc": "{{field}}, descending",
+    "fullDetails": "Full token details"
+  },
+  "keyCatalog": {
+    "searchByName": "Search by name",
+    "filters": "Filters",
+    "filtersWithCount": "Filters ({{count}})",
+    "clearSearch": "Clear search and filters",
+    "rowPreviewInstructions": "Press Enter or Space for quick view.",
+    "closeQuickView": "Close quick view",
+    "fullDetails": "Full key details"
+  },
+  "compactKey": {
+    "parameters": "Key parameters",
+    "record": "Key record",
+    "managedBy": "Managed by",
+    "managedService": "Service",
+    "managedCredential": "Credential",
+    "managedOrganization": "Organization",
+    "features": "Features",
+    "rootProperties": "Other properties",
+    "propertyCategories": "Property categories",
+    "sizeBits_one": "{{count}} bit",
+    "sizeBits_other": "{{count}} bits"
+  },
   "resetFilters": "Reset filters",
   "showFilters": "Show filters",
   "hideFilters": "Hide filters",
   "emptyList": "List is empty",
+  "noMatchingResults": "No results match the filters",
+  "listLoadError": "Could not load this list.",
+  "listLoadMoreError": "Could not load more results.",
   "loadMore": "Load More",
   "loading": "Loading...",
   "type": "Type",
@@ -644,6 +1113,23 @@
   "auditor": "Auditor",
   "admin": "Admin",
   "owner": "Owner",
+  "actionLabels": {
+    "add": "Add",
+    "cancelJob": "Cancel",
+    "createGoodKeyJob": "Create GoodKey job",
+    "deleteRecord": "Delete record",
+    "download": "Download",
+    "generate": "Generate",
+    "goodKeyRecord": "GoodKey record",
+    "invite": "Invite",
+    "recoverPin": "Recover PIN",
+    "request": "Request",
+    "requestReset": "Request reset",
+    "resetProfile": "Reset",
+    "restore": "Restore",
+    "sync": "Sync",
+    "withdraw": "Withdraw"
+  },
   "create": "Create",
   "edit": "Edit",
   "delete": "Delete",
@@ -713,7 +1199,7 @@
     "description": "Manage your virtual authenticators"
   },
   "authenticatorProducts": {
-    "title": "Authenticator products",
+    "title": "Device products",
     "description": "Browse authenticator products available to your organization"
   },
   "authenticator": {
@@ -856,6 +1342,22 @@
     },
     "simulator": "Simulator",
     "productPage": {
+      "vendorId": "Vendor ID",
+      "profileId": "Profile ID",
+      "taskId": "Task ID",
+      "systemTask": "System task",
+      "contractVersion": "Contract version",
+      "schemaHash": "Schema hash",
+      "resultFields": "Result fields",
+      "keyTypes": "Key types",
+      "singleUpdateOnly": "Single-task update",
+      "hasDefault": "Default available",
+      "retryPolicy": "Retry policy",
+      "limited": "Limited",
+      "unlimited": "Unlimited",
+      "generatesSecret": "Server generates secret",
+      "resettableProfiles": "Resettable profiles",
+      "allowResetFromFailed": "Profile reset after failure",
       "common": "Authenticator product",
       "description": "View the authenticator product model and its profile capabilities",
       "vendor": "Vendor",
@@ -915,16 +1417,6 @@
       "compatibilityOk": "Job is compatible and can be executed.",
       "compatibilityFailed": "Job is not executable"
     },
-    "register": {
-      "common": "Register authenticator",
-      "title": "Register authenticator",
-      "serialGenerated": "A serial number was generated automatically.",
-      "initialized": "Authenticator is already initialized",
-      "adminSecrets": "Admin secrets",
-      "noAdminSecrets": "No admin secrets are declared for this product.",
-      "useDefault": "Use default"
-    },
-    "registered": "Authenticator registered successfully",
     "forceDelete": "Force delete authenticator",
     "forceDeleteTooltip": "Force delete authenticator without creating a deletion job",
     "forceDeleteConfirmation": "Force deletion permanently removes this authenticator without creating a deletion job. This action cannot be undone.",
@@ -971,6 +1463,7 @@
       }
     },
     "secretReveal": {
+      "copyValue": "Copy secret value",
       "title": "Reveal secret",
       "currentTitle": "Reveal current admin secret",
       "currentButton": "Reveal current admin secret",
@@ -994,7 +1487,7 @@
       "lost": "Lost"
     },
     "requests": {
-      "title": "Authenticator requests",
+      "title": "Device requests",
       "shortTitle": "Requests",
       "openRequests": "View requests",
       "description": "Holders can request PIN recovery, profile reset, or unregistration. Reviewers approve or reject requests. Job progress is separate from the decision.",
@@ -1015,6 +1508,8 @@
       "reasonHint": "Optional, up to 1024 characters.",
       "error": "Unable to complete the request.",
       "authenticatorId": "Authenticator ID",
+      "decidedBy": "Decided by",
+      "decidedAt": "Decided at",
       "openJob": "Open job",
       "loadMore": "Load more",
       "status": {
@@ -1054,13 +1549,17 @@
       "task": "Task",
       "requirements": "Use a GoodKey App session for this card’s holder. Choose GoodKey App on the login page or paste an App access token. The App uses foo in Development, Canary and Sandbox, and goodkey-app in Production; the server must accept the same client ID.",
       "instructions": "The task must be processing in an active job and use this secret. Enter a current version, the recovery version, or the exact pending version created by a lifecycle task. Other combinations can be submitted to inspect the server’s denial.",
-      "loadSecrets": "Load card secret references",
+      "loadSecrets": "Load secret references for this card",
+      "loadSecretsShort": "Load secret references",
       "selectSecret": "Card secret",
       "moreSecrets": "More card secrets are available. Enter an ID manually if it is not listed.",
       "current": "Use current version",
+      "currentShort": "Current version",
       "recovery": "Use recovery version",
+      "recoveryShort": "Recovery version",
       "portalReveal": "Reveal as privileged user (Portal API)",
-      "portalCurrent": "Reveal current version as privileged user (Portal API)",
+      "portalCurrent": "Privileged reveal of the current version (Portal API)",
+      "portalCurrentShort": "Privileged reveal",
       "clientDiagnostic": "Client",
       "clientFromToken": "{{client}} (from token; App access unverified)",
       "clientUnknown": "Unknown; client metadata is unavailable",
@@ -1083,7 +1582,7 @@
       "title": "Profile reset",
       "description": "Reset one profile while keeping the authenticator registered and active. Other profiles are preserved.",
       "direct": "Reset {{profile}}",
-      "request": "Request {{profile}} reset",
+      "request": "Request reset ({{profile}})",
       "approve": "Approve {{profile}} reset",
       "authenticatorKeyResetPolicy": "PIV / PKCS#11 reset and unregistration policy",
       "authenticatorFido2ResetPolicy": "FIDO2 reset policy",
@@ -1130,24 +1629,249 @@
       }
     }
   },
+  "deviceWorkspace": {
+    "requestsEmpty": "No requests for this device. New requests appear here when the holder submits an action for approval.",
+    "actions": {
+      "checkFailed": "Could not verify availability. Refresh to try again.",
+      "label": "Actions",
+      "checking": "Checking available actions…",
+      "unavailable": "No actions available for this device.",
+      "pin": "PIN recovery",
+      "device": "Device",
+      "destructive": "Device lifecycle",
+      "tooltip": "Manage device",
+      "needsApproval": "Sends a request for approval",
+      "resetIrreversible": "Permanently deletes the profile keys and PIN"
+    },
+    "browserCard": "Card in this browser",
+    "goodKeyReport": "GoodKey report",
+    "pinHeading": "{{profile}} PIN",
+    "pinMismatch": "The card and GoodKey report different PIN states.",
+    "openSync": "Open card snapshot sync",
+    "executor": "Browser card",
+    "openOperation": "Open operation",
+    "localOperations": "Local operations",
+    "serverOperations": "GoodKey jobs",
+    "openObjects": "View objects",
+    "backToOperation": "Back to operation",
+    "chooseJob": "Select a GoodKey job to continue.",
+    "awaitingAck": "Executed on the card · Waiting for GoodKey acknowledgement",
+    "retryAck": "Resend report",
+    "holderOnly": "The device holder can start PIN recovery.",
+    "reviewRequest": "Review request",
+    "allRequests": "Show all requests",
+    "checkingRecovery": "Checking recovery eligibility…",
+    "recoveryCheckFailed": "Recovery eligibility could not be verified. Refresh to try again.",
+    "bindingChanged": "The linked card is no longer available in this browser.",
+    "cardDetails": "Card details",
+    "hideOperation": "Hide operation",
+    "closeInspector": "Close",
+    "overview": {
+      "openBrowserCards": "Open browser cards",
+      "openJobs": "Open jobs",
+      "jobsUnavailable": "Job status could not be loaded.",
+      "activeJobs_one": "{{count}} active job",
+      "activeJobs_other": "{{count}} active jobs",
+      "processingJobs_one": "{{count}} job in progress",
+      "processingJobs_other": "{{count}} jobs in progress",
+      "cardGuidance": {
+        "missing-local-card": "Open this device in the browser profile where you created the card to run jobs on it. If its site data was cleared, create a separate replacement from Browser cards.",
+        "quarantined": "This browser found the card link but could not read the card data. Open Browser cards to see which cards are available.",
+        "unsupported": "Use a browser with a compatible version of this app to open the card."
+      },
+      "jobsWaitingForCard_one": "{{count}} job is waiting for this card.",
+      "jobsWaitingForCard_other": "{{count}} jobs are waiting for this card."
+    },
+    "pinState": {
+      "blocked": "Blocked",
+      "unblocked": "Unblocked",
+      "not_applicable": "Not configured",
+      "unknown": "Unknown",
+      "missing": "No observation"
+    },
+    "availability": {
+      "physical": "Use the physical device to execute its jobs.",
+      "failed": "Card availability could not be verified.",
+      "loading": "Checking this browser for a linked card…",
+      "missing-local-card": "The virtual card is unavailable in this browser.",
+      "unknown-model": "Browser card availability is unknown.",
+      "quarantined": "The linked browser card could not be read.",
+      "unsupported": "This browser card format is unsupported."
+    },
+    "workflow": {
+      "request": "Request {{id}}",
+      "pending": "Waiting for an organization reviewer",
+      "approved": "Approved",
+      "rejected": "Rejected",
+      "canceled": "Withdrawn",
+      "execution": "Open recovery job",
+      "unlinked": "This request has no linked job.",
+      "result": "Job result",
+      "waitingOnCard": "Waiting to run on the card (see the card panel)"
+    },
+    "rejectOrDetails": "Reject or view details",
+    "nextStep": {
+      "title": "Waiting to run on the card: {{name}}",
+      "help_one": "{{count}} task. Run it so the card completes the job and reports to GoodKey.",
+      "help_other": "{{count}} tasks. Run them so the card completes the job and reports to GoodKey.",
+      "run": "Run on the card",
+      "running": "Running on the card…",
+      "review": "Open parameters",
+      "details": "Details",
+      "runningTitle": "Running on the card: {{name}}",
+      "finished": "Job \"{{name}}\" completed on the card."
+    }
+  },
+  "deviceCatalog": {
+    "title": "Devices",
+    "source": "Device source",
+    "organization": "In the organization",
+    "browser": "In this browser",
+    "organizationEmpty": "There are no devices in this organization.",
+    "localCard": "Browser card",
+    "browserSearch": "Search by label, serial number or product",
+    "goodKeyLink": "GoodKey link",
+    "linkSaved": "Link saved in this browser",
+    "bindingReadError": "Browser storage could not be read to check for linked cards.",
+    "localShort": {
+      "available": "Linked",
+      "unavailable": "Unavailable",
+      "missing": "Not linked",
+      "unverified": "Unverified",
+      "checking": "Checking…"
+    },
+    "local": {
+      "available": "Available in this browser",
+      "unavailable": "Linked card unavailable",
+      "missing": "No linked browser card",
+      "unverified": "Could not verify",
+      "checking": "Checking browser storage"
+    },
+    "attention": {
+      "title": "Needs attention",
+      "browserCard": "Card in this browser",
+      "requests_one": "{{count}} request awaits decision",
+      "requests_other": "{{count}} requests await decision",
+      "jobs_one": "{{count}} job waits for the card",
+      "jobs_other": "{{count}} jobs wait for the card"
+    },
+    "organizationSearch": "Search by label"
+  },
+  "deviceCreation": {
+    "advanced": "Advanced options",
+    "createLocal": "Create card",
+    "registerInGoodKey": "Also register in GoodKey",
+    "registerInNamedOrganization": "Also register in GoodKey for {{organization}}",
+    "createAndRegister": "Create and register",
+    "savedLocally": "“{{label}}” was saved in this browser.",
+    "continue": "Open card",
+    "registrationRejected": "GoodKey rejected the registration. You can retry or open the card.",
+    "registrationLocksRequired": "GoodKey registration and snapshot sync require a browser with Web Locks support.",
+    "registrationCheckFailed": "Could not check the registration in GoodKey. Check the connection and retry.",
+    "registrationUnconfirmed": "GoodKey registration is unconfirmed. Check again to see whether GoodKey received it.",
+    "registrationCandidate": "GoodKey has a matching record. Open it and verify that it belongs to this card. Confirming links the browser card to that record and sends its current snapshot.",
+    "recordIdentity": "Record {{id}} · Serial {{serial}}",
+    "confirmLink": "Confirm link and send snapshot",
+    "bindingConflict": "This GoodKey record is already linked to another card in this browser.",
+    "bindingPending": "GoodKey registered the device. Saving its link to the browser card is pending.",
+    "snapshotPending": "The card is registered in GoodKey. Sending the card snapshot is pending.",
+    "retryRegistration": "Retry registration",
+    "checkRegistration": "Check registration",
+    "retryBinding": "Retry linking",
+    "retrySnapshot": "Retry sending snapshot",
+    "simLabelHint": "GoodKey adds the [SIM] prefix to the label."
+  },
   "virtualCard": {
+    "serverStateRefreshFailed": "The action succeeded, but the latest GoodKey data could not be loaded.",
+    "serverActions": {
+      "report": "Send profile state to GoodKey",
+      "reported": "{{profileLabel}} profile state sent to GoodKey.",
+      "requestSubmitted": "{{profileLabel}} request submitted for approval.",
+      "lostReported": "Card reported lost in GoodKey."
+    },
+    "profileInfoUnavailable": "This profile has no state to report to GoodKey.",
+    "goodkeyExecution": {
+      "progress": {
+        "starting": "Starting update",
+        "preflight": "Checking the update",
+        "processing": "Running on card",
+        "reporting": "Confirming result",
+        "confirmed": "Result confirmed",
+        "pausing": "Pausing after the current task",
+        "paused": "Paused",
+        "pending_ack": "Awaiting confirmation",
+        "completed": "Update completed",
+        "failed": "Execution failed",
+        "canceled": "Update canceled",
+        "blocked": "Execution stopped",
+        "unavailable": "Unavailable",
+        "confirmedCount": "{{count}} of {{total}} confirmed",
+        "reportingTask": "Sending the result of {{task}} to GoodKey."
+      },
+      "controls": "Execution controls",
+      "update": "GoodKey update",
+      "waiting": "Awaiting execution",
+      "task": "GoodKey task",
+      "behavior": "Card behavior",
+      "normal": "Normal",
+      "pointLabel": "Injection point",
+      "point": {
+        "before": "Before the operation",
+        "during": "During the operation",
+        "after": "When reporting the result"
+      },
+      "once": "Once",
+      "clearFault": "Clear fault",
+      "disconnected": "Card disconnected before the operation",
+      "disconnectHelp": "The card disconnects before this task starts. Reconnect the card to continue.",
+      "pendingAck": "Awaiting GoodKey acknowledgment",
+      "local": {
+        "completed": "Completed on card",
+        "failed": "Execution failed",
+        "processing": "Awaiting local result",
+        "unknown": "No local result recorded"
+      },
+      "run": "Run",
+      "step": "Step"
+    },
     "title": "Virtual cards",
     "description": "Create a virtual smart card and rehearse complete GoodKey workflows without hardware.",
     "create": "Create virtual card",
-    "delete": "Delete local card",
+    "delete": "Delete card…",
     "deleteTitle": "Delete virtual card?",
     "deleteOptions": {
-      "cardDescription": "Delete virtual card “{{name}}” ({{serial}}) from this browser?",
+      "copyKept": "GoodKey confirmed deletion. The browser copy was kept and unlinked from the server record.",
+      "jobReady": "The deletion job is ready. Connect the card to run it.",
+      "selectTarget": "Choose how to remove the card.",
+      "cardDescription": "Virtual card “{{name}}” ({{serial}})",
       "server": "Delete from GoodKey",
-      "force": "Force delete on the server",
-      "managedHelp": "Managed deletion runs the card workflow automatically. Local data is kept if the workflow does not complete.",
-      "forceHelp": "Force deletion skips the card workflow.",
+      "force": "Force delete in GoodKey",
+      "managedHelp": "GoodKey runs deletion tasks on this card. A profile reset may remove keys, certificates, and other local objects. If the job needs manual continuation, this browser keeps the card and its GoodKey link for that job.",
+      "forceHelp": "GoodKey marks the authenticator deleted. A retained browser copy keeps its keys, certificates, and other objects.",
       "interrupted": "Deletion was interrupted because the page changed.",
       "changed": "The local card or its server binding changed. Refresh and try again.",
       "pendingReports": "The card has unreported task results. Send them before deleting the server record.",
       "missingJob": "The server did not provide a deletion job. The local card was kept.",
       "serverDeletedLocalFailure": "The server record was deleted, but the local card could not be updated. Refresh and inspect the card before retrying.",
-      "workflowIncomplete": "Managed deletion did not complete. The local card was kept; inspect the deletion job and retry."
+      "workflowIncomplete": "Managed deletion did not complete. The local card was kept; inspect the deletion job and retry.",
+      "serverUnavailable": "Could not verify deletion options in GoodKey. Try again when GoodKey is available.",
+      "notAllowed": "You do not have permission to use this deletion method.",
+      "requestKeepLocal": "Keep the browser copy so the deletion job can run after approval.",
+      "requestSubmitted": "The deletion request was submitted for approval.",
+      "method": "Deletion method",
+      "local": "Delete from this browser",
+      "managed": "Delete through a GoodKey job",
+      "request": "Request deletion in GoodKey",
+      "resume": "Resume deletion through a GoodKey job",
+      "finish": "Finish after deletion in GoodKey",
+      "removeLocal": "Also remove the browser copy after confirmation from GoodKey",
+      "keepLocal": "After GoodKey confirms deletion, the browser keeps the card in its resulting state and removes its GoodKey link.",
+      "requestHelp": "GoodKey creates an approval request. The card and its GoodKey link stay available to run the deletion job after approval.",
+      "resumeHelp": "Continue the existing GoodKey deletion job. Its tasks may reset profiles and remove keys, certificates, and other local objects. Keep the card until GoodKey confirms deletion.",
+      "finishHelp": "GoodKey confirms the authenticator is deleted. Finish by removing its link from the browser card or deleting the browser copy.",
+      "connectForManaged": "The deletion job will open so you can connect the card and run it. After GoodKey confirms deletion, reopen this dialog to choose what to do with the browser copy.",
+      "checking": "Checking GoodKey status and permissions…",
+      "inProgress": "Processing deletion…"
     },
     "deleteLocalData": "This card's keys, certificates, PIN/PUK, history and pending task results will be permanently deleted from this browser. This cannot be undone.",
     "deleteServerUnchanged": "The GoodKey server record and jobs will remain unchanged. This local card will no longer be available to execute them.",
@@ -1173,14 +1897,15 @@
     "saveError": "Could not save the card. Check browser storage availability and retry.",
     "loadError": "Could not load virtual cards from browser storage.",
     "serverLoadError": "Could not load GoodKey jobs. Refresh the jobs after checking your connection.",
-    "environment": "GoodKey environment",
-    "storageNote": "Cards and their private keys stay in this browser, scoped to the server and organization. Clearing site data removes them. Models that support attestation use a local browser root; it is not hardware attestation.",
+    "jobsIncomplete": "Some GoodKey jobs could not be loaded. Retry to see the full list.",
+    "jobLoadError": "Could not load the requested GoodKey job. Select another job or refresh to retry.",
+    "storageNote": "Cards and private keys are stored in this browser per server and organization. Clearing site data deletes them. Supported models simulate attestation with a browser-local root certificate.",
     "virtual": "Virtual",
     "badge": "Virtual",
     "useWorkspace": "Open virtual card",
     "workspaceHint": "Use the virtual card workspace to execute this job and keep card state synchronized.",
     "connected": "Connected",
-    "disconnected": "Removed",
+    "disconnected": "Ejected",
     "bound": "Registered in GoodKey",
     "localOnly": "Local card",
     "pinAttempts": "PIN attempts: {{count}} / {{max}}",
@@ -1188,6 +1913,15 @@
     "soAttempts": "SO PIN attempts: {{count}} / {{max}}",
     "mgmAttempts": "MGM attempts: {{count}} / {{max}}",
     "mgmUnlimited": "MGM attempts: unlimited",
+    "cardSummary": {
+      "pinAttempts": "PIN attempts",
+      "pukAttempts": "PUK attempts",
+      "soAttempts": "SO PIN attempts",
+      "mgmAttempts": "MGM attempts",
+      "credentials": "Credentials",
+      "counter": "{{count}} / {{max}}",
+      "unlimited": "Unlimited"
+    },
     "fidoProfile": "FIDO2 profile",
     "fidoControls": {
       "block": "Block PIN",
@@ -1207,14 +1941,13 @@
     "keyCount": "Occupied slots: {{count}}",
     "open": "Open workspace",
     "empty": "Your first virtual card",
-    "emptyHelp": "Start with a factory card, register it, then generate a key and certificate.",
+    "emptyHelp": "Use the card in this browser or register it to run GoodKey jobs in the selected organization.",
     "workspaceDescription": "Execute real software cryptography and inspect card state alongside GoodKey jobs.",
     "back": "Virtual cards",
     "repeat": "Repeat on a new card",
-    "boundary": "This is a local virtual binding. GoodKey API actions create real records marked SIM; hardware properties are simulated.",
     "notFound": "This virtual card is unavailable for the selected server and organization.",
     "card": "Card",
-    "disconnect": "Remove card",
+    "disconnect": "Eject card",
     "connect": "Connect card",
     "profile": "PIV profile",
     "pkcs11Profile": "PKCS#11 profile",
@@ -1302,6 +2035,22 @@
     "registeredHistory": "Virtual card registered in GoodKey.",
     "registrationCreated": "Registration created. Execute its lifecycle tasks in GoodKey API mode.",
     "deletionCreated": "Deletion job created. Execute its lifecycle tasks to finish managed deletion.",
+    "runContext": {
+      "ready": "Ready",
+      "processing": "In progress",
+      "unavailable": "Unavailable",
+      "executing": "Executing the current operation.",
+      "loadingJobs": "Loading GoodKey jobs for this card.",
+      "jobFinished": "This GoodKey job has finished.",
+      "jobDraft": "Activate the draft job in GoodKey before running it.",
+      "jobBlocked": "This job is waiting for its dependencies.",
+      "resumable": "Ready to resume",
+      "completed": "Completed",
+      "scenarioFinished": "All scenario steps have run.",
+      "noScenario": "No local scenarios are available for this card.",
+      "importRequired": "Enter the key or certificate to import.",
+      "credentialsRequired": "Review the required credentials before running."
+    },
     "runStatus": {
       "completed": "GoodKey workflow completed.",
       "paused": "Paused between server tasks. Continue to execute the next task.",
@@ -1310,7 +2059,7 @@
     },
     "progress": {
       "preflight": "Checking the implemented virtual card operations against the saved server workflow.",
-      "processing": "Executing {{task}} on the virtual card.",
+      "processing": "Running on the virtual card: {{task}}.",
       "pendingAck": "The local result is saved. Retry sending it without repeating the card operation.",
       "lostAck": "Simulated lost response: the local operation is saved; its server result is pending.",
       "acknowledged": "The server confirmed the virtual card operation.",
@@ -1448,7 +2197,7 @@
       "invalid_result": "The software operation returned an invalid result. Review the saved card state before starting a new workflow.",
       "credential_required": "Provide the current credentials and new PIN requested by the operation, following the selected model’s requirements. GoodKey API operations resolve administrative secrets from the server.",
       "card_not_connected": "Reconnect the virtual card before executing this task.",
-      "lock_unavailable": "This browser does not support Web Locks, so virtual card execution is unavailable. Open this page in a browser that supports it."
+      "lock_unavailable": "GoodKey jobs and result retries require Web Locks. Open this page in a browser with Web Locks support."
     },
     "credentials": {
       "automatic": "Use current virtual card credentials",
@@ -1481,6 +2230,58 @@
     "slotEmpty": "empty",
     "slotLabel": "Slot {{slot}}",
     "failedJobHint": "This job has ended. Its failed tasks cannot be resumed.",
+    "profiles": {
+      "selector": "Profile",
+      "unavailable": "No card profiles are available.",
+      "objectsTitle": "{{profile}} objects",
+      "purpose": "Purpose",
+      "slotActions": "Actions for slot {{slot}}",
+      "editState": "Edit state",
+      "stateTitle": "{{credential}} retry state",
+      "prepareState": "Prepare state",
+      "before": "Current",
+      "after": "After",
+      "stateLocal": "This state is saved on the card in this browser.",
+      "applyState": "Apply to card",
+      "stateChanged": "This retry state changed. Review the current count and try again.",
+      "stateSaved": "{{credential}} retry state saved on the card.",
+      "chooseFile": "Choose file",
+      "fileError": "Could not read the selected file.",
+      "writeObject": "Write to card",
+      "objectSaved": "Slot {{slot}} updated on the card.",
+      "objectLocal": "Changes apply to the card in this browser.",
+      "otpUsb": "OTP over USB",
+      "otpEnabled": "Enabled",
+      "otpDisabled": "Disabled",
+      "presets": {
+        "normal": "Restore full attempts",
+        "lastAttempt": "Last attempt",
+        "blocked": "Blocked"
+      },
+      "editCounter": "Edit state for {{credential}}",
+      "manageProfile": "Manage profile",
+      "manageCredential": "Manage {{credential}}",
+      "resetFidoLocal": "Reset FIDO2 in this browser",
+      "localActions": "In this browser",
+      "goodkeyActions": "GoodKey",
+      "retryCounters": "Credential retry counters",
+      "credentials": {
+        "pivPin": "PIN",
+        "pivPuk": "PUK",
+        "pivMgm": "Management key (MGM)",
+        "fidoPin": "FIDO2 PIN",
+        "pkcs11Pin": "User PIN",
+        "pkcs11So": "SO PIN"
+      },
+      "retryState": {
+        "normal": "Ready",
+        "lastAttempt": "Last attempt",
+        "blocked": "Blocked",
+        "unlimited": "Unlimited attempts",
+        "uninitialized": "Not set",
+        "unavailable": "Retry state unavailable"
+      }
+    },
     "objects": {
       "title": "Slot objects",
       "key": "Key",
@@ -1559,10 +2360,21 @@
       "errorUserId": "Enter a user id of 1 to 128 characters.",
       "errorUserName": "Enter a user name of 1 to 128 characters.",
       "errorDisplayName": "Enter a display name of 1 to 128 characters.",
+      "errorJson": "Enter valid JSON or select a JSON file.",
       "errorImport": "The import file is invalid: {{reason}}",
       "errorFile": "Could not read the selected file."
     },
     "replaceKeyHint": "Generating or importing a key replaces its key and CSR. The certificate remains until replaced or deleted.",
+    "workspace": {
+      "profilesTab": "Card profiles",
+      "executionTab": "Execution",
+      "manage": "Manage card",
+      "openAuthenticator": "Open authenticator",
+      "noUpdates": "This card has no updates from GoodKey. Open the authenticator to create an update.",
+      "credentials": "Credentials",
+      "credentialsTitle": "Card credentials",
+      "closeCredentials": "Done"
+    },
     "tabs": {
       "label": "Virtual card sections",
       "card": "Card",
@@ -1575,6 +2387,7 @@
       "filterAll": "All",
       "filterLocal": "Local",
       "filterApi": "GoodKey API",
+      "occurredAt": "Time",
       "historyEmptyFilter": "No entries for this filter.",
       "dangerZone": "Danger zone"
     },
@@ -1584,7 +2397,7 @@
       "hint": "Block only the user PIN to test recovery, keeping the PUK/SO PIN usable. Bound cards automatically report the new state to GoodKey.",
       "blockAndSync": "Block {{profile}} PIN and sync",
       "block": "Block {{profile}} PIN",
-      "blockedSynced": "PIN blocked; the snapshot was synchronized with GoodKey. Open the server details to request recovery.",
+      "blockedSynced": "PIN blocked and the snapshot synced to GoodKey. Request recovery from the PIN section on this page.",
       "blockedLocal": "PIN blocked on the local virtual card."
     },
     "initialCredentials": "Starting credentials",
